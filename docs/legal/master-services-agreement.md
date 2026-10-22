@@ -1,11 +1,11 @@
 # Master Services Agreement (MSA)
 
 **Document Reference:** AUC-LEG-MSA-001  
-**Version:** 3.0  
+**Version:** 3.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Public / Commercial Terms  
-**Architectural Structure:** Microsoft Modular Universal Terms + Google Flow-Down Schedules  
+**Architectural Structure:** Modular Universal Terms + Service-Specific Schedules  
 **Incorporated Schedules:** [Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md) | [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md) | [Data Processing Addendum (DPA)](data-processing-addendum.md) | [Acceptable Use Policy (AUP)](acceptable-use-policy.md)
 
 ---
@@ -16,7 +16,7 @@ BY EXECUTING AN ORDER FORM THAT REFERENCES THIS AGREEMENT, OR BY ACCESSING OR US
 
 ---
 
-## 1. Modular Agreement Structure & Hierarchy
+## 1. Modular Agreement Structure & Order of Precedence
 
 To provide clarity and modularity across our cloud and AI capabilities, this Agreement consists of:
 1. **These Core Universal Terms:** Establishing foundational enterprise SaaS commitments, billing, liability, confidentiality, and dispute procedures;
@@ -26,7 +26,16 @@ To provide clarity and modularity across our cloud and AI capabilities, this Agr
 5. **[Data Processing Addendum (DPA)](data-processing-addendum.md):** Fulfilling GDPR, CCPA, and global privacy requirements;
 6. **[Acceptable Use Policy (AUP)](acceptable-use-policy.md):** Defining safety boundaries harmonized with upstream hyperscaler policies.
 
-In the event of any conflict, the documents control in the following descending order: (i) Order Form; (ii) Customer Copyright Addendum; (iii) AI Service-Specific Terms (Schedule 1); (iv) Data Processing Addendum; (v) these Core Universal Terms; and (vi) the Documentation.
+**Order of Precedence:** In the event of any conflict or inconsistency among the documents comprising this Agreement, the following order of precedence shall govern, strictly scoped by subject matter:
+1. **Mandatory Data Protection & Sector Instruments:** The Data Processing Addendum (including SCCs) and any executed sector-specific addendum (HIPAA BAA, CJIS Addendum) shall govern exclusively with respect to data protection, privacy, and regulatory compliance obligations;
+2. **Non-Retention Commitments:** The AI DPA & Model Non-Retention Addendum shall govern expressly agreed model training and retention commitments;
+3. **Intellectual Property Defense:** The Customer Copyright & IP Protection Addendum shall govern output intellectual property defense obligations;
+4. **AI Functionality & Flow-Down Restrictions:** Schedule 1 (AI Service-Specific Terms) and the Acceptable Use Policy shall govern AI-specific features, multi-model routing, agent execution, and upstream hyperscaler flow-downs;
+5. **Commercial Order Forms:** An applicable Order Form shall control pricing, subscription capacity, and commercial parameters, but shall not amend or waive the mandatory protections in (1), (2), or (4) unless expressly agreed by authorized corporate officers;
+6. **Core Universal Terms:** These Core Universal Terms of this Master Services Agreement; and
+7. **Documentation:** The technical Documentation.
+
+**Enterprise Account Separation:** Where an executed Master Services Agreement governs Customer’s use of the Services, no individual Authorized User clickthrough agreement, self-service Terms of Service, or in-app terms shall amend, supersede, or alter the terms of this Agreement.
 
 ---
 
@@ -44,7 +53,7 @@ In the event of any conflict, the documents control in the following descending 
 ## 3. Platform Access, Licensing, and Developer Rules
 
 ### 3.1 Provision of Services
-Auctoric grants Customer a worldwide, non-exclusive, non-transferable (except as permitted under Section 14.3) right to access and use the Auctoric Platform solely for Customer’s internal business operations during the Subscription Term, subject to this Agreement and applicable Order Forms.
+Auctoric grants Customer a worldwide, non-exclusive, non-transferable (except as permitted under Section 13.3) right to access and use the Auctoric Platform solely for Customer’s business operations during the Subscription Term, subject to this Agreement and applicable Order Forms.
 
 ### 3.2 Account Security & Credentials
 Customer is responsible for all activity occurring under its Authorized User accounts. Customer shall maintain the confidentiality of all API tokens, client secrets, and authentication credentials, and promptly notify Auctoric at `[security@auctoric.ai]` upon becoming aware of any credential compromise.
@@ -54,7 +63,7 @@ Because Auctoric orchestrates underlying foundation models (including Google Clo
 1. **Anti-Model Distillation:** Customer shall not use Outputs to train, fine-tune, or calibrate any machine learning or foundation model that competes with Auctoric or its foundational infrastructure providers;
 2. **Reverse Engineering:** Customer shall not reverse engineer, decompile, disassemble, or extract model weights, neural architectures, or latent embeddings of the Services;
 3. **No Unapproved Benchmarking:** Customer shall not publicly publish competitive benchmarking, stress tests, or comparative performance evaluations of the Services without prior written authorization from Auctoric;
-4. **Upstream Abuse Suspension:** If an upstream provider (e.g., Google Cloud Trust & Safety) issues an abuse strike or security throttle resulting from Customer’s prompts, Auctoric may immediately suspend the affected endpoint to protect platform stability.
+4. **Upstream Abuse Suspension:** If an upstream provider (e.g., Google Cloud Trust & Safety) issues an abuse strike or security throttle resulting from Customer’s prompts, Auctoric may immediately suspend the affected endpoint to protect platform stability. Auctoric will provide notice and identify restoration conditions as soon as lawful and practicable.
 
 ---
 
@@ -93,7 +102,7 @@ Fees do not include taxes, levies, duties, or governmental assessments. Customer
 To the extent Auctoric processes Personal Data on behalf of Customer, the terms of the Auctoric [Data Processing Addendum](data-processing-addendum.md), including Standard Contractual Clauses (SCCs), are incorporated into and form an integral part of this Agreement.
 
 ### 6.2 Security Safeguards
-Auctoric maintains an enterprise-grade Information Security Program adhering to ISO 27001, SOC 2 Type II, and ISO 42001 standards as described in our [Information Security Policy](../security-trust/information-security-policy.md).
+Auctoric maintains an enterprise Information Security Program designed to comply with ISO/IEC 27001, SOC 2 Type II, and ISO/IEC 42001 control criteria as described in our [Information Security Policy](../security-trust/information-security-policy.md). Auctoric implements administrative, technical, and physical safeguards designed to protect the confidentiality, integrity, and availability of Customer Content.
 
 ---
 
@@ -137,7 +146,8 @@ EXCEPT FOR EXCLUDED LIABILITIES (SECTION 9.3), EACH PARTY’S MAXIMUM AGGREGATE 
 The limitations in Section 9.1 and Section 9.2 do not apply to:
 1. Either party's gross negligence or willful misconduct;
 2. Customer's breach of Section 3.3 (Upstream Flow-Downs / Anti-Distillation / Prohibitions);
-3. Indemnification obligations under Section 8.1, 8.2, and 8.3.
+3. Indemnification obligations under Section 8.1, 8.2, and 8.3;
+4. Customer's payment obligations under Section 5.
 
 ---
 
@@ -152,13 +162,13 @@ Either party may terminate this Agreement:
 2. Immediately if the other party becomes insolvent, enters receivership, or makes an assignment for the benefit of creditors.
 
 ### 10.3 Post-Termination Data Portability and Deletion
-Upon request within thirty (30) days after termination, Auctoric will make Customer Content available for export. After such period, Auctoric will purge and overwrite all Customer Content from active databases in accordance with NIST SP 800-88 Rev 1 media sanitization standards.
+Upon request within thirty (30) days after termination, Auctoric will make Customer Content available for export. After such 30-day period, Auctoric will permanently deprovision and sanitize all Customer Content from active databases within thirty (30) calendar days (total maximum 60 days from termination), in accordance with NIST SP 800-88 Revision 2 media sanitization standards.
 
 ---
 
 ## 11. Confidentiality
 
-"Confidential Information" means all non-public information disclosed by one party ("**Disclosing Party**") to the other ("**Receiving Party**") that is designated as confidential or reasonably should be understood to be confidential. The Receiving Party will protect the Disclosing Party’s Confidential Information with reasonable care and will not disclose it to third parties except to employees, advisors, and contractors bound by confidentiality obligations.
+"Confidential Information" means all non-public information disclosed by one party ("**Disclosing Party**") to the other ("**Receiving Party**") that is designated as confidential or reasonably should be understood to be confidential. The Receiving Party will protect the Disclosing Party’s Confidential Information with reasonable care and will not disclose it to third parties except to employees, advisors, and contractors bound by confidentiality obligations. Confidential Information does not include information that: (i) is or becomes publicly known through no breach; (ii) was known prior to disclosure without confidentiality restrictions; (iii) is independently developed without reference to Disclosing Party's information; or (iv) is required to be disclosed by law or court order, provided prompt notice is given where legally permissible.
 
 ---
 

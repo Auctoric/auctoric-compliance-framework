@@ -1,16 +1,17 @@
 # Global Privacy Policy
 
 **Document Reference:** AUC-LEG-PRIV-001  
-**Version:** 3.0  
+**Version:** 3.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
-**Classification:** Public / Legal
+**Classification:** Public / Legal  
+**Regulatory Baselines:** Regulation (EU) 2016/679 (GDPR) | UK GDPR | California Consumer Privacy Act as amended (CPRA) | Swiss FADP | Canadian PIPEDA
 
 ---
 
 ## 1. Introduction & Scope
 
-**[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our") provides an enterprise-grade Governed AI-as-a-System platform. We are committed to upholding the highest standards of data protection, transparency, and individual privacy rights.
+**[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our") provides an enterprise-grade Governed AI-as-a-System platform. We are committed to upholding data protection, transparency, and individual privacy rights.
 
 This Global Privacy Policy ("**Policy**") explains how we collect, use, disclose, and protect personal data across our websites, cloud platform, developer consoles, APIs, and client-facing AI governance solutions. It applies to:
 * Visitors to our websites (`[https://auctoric.ai]`);
@@ -41,7 +42,7 @@ We use personal data strictly for legitimate operational purposes, including:
 2. Authenticating user identity, enforcing role-based access control (RBAC), and detecting unauthorized access;
 3. Metering API usage, calculating billable tokens, and processing subscription invoices;
 4. Enforcing our Acceptable Use Policy and mitigating cybersecurity threats (e.g., prompt injection, DDoS);
-5. Complying with regulatory obligations under GDPR, CCPA, HIPAA, CJIS, and the EU AI Act.
+5. Complying with applicable laws under GDPR, CCPA, HIPAA, CJIS, and the EU AI Act.
 
 > [!IMPORTANT]
 > **Zero Customer Data Retention for Base Model Training:** Auctoric does NOT sell personal data, nor do we use Customer Content (prompts, inputs, vector embeddings, outputs) to train or improve public foundational models.
@@ -50,8 +51,8 @@ We use personal data strictly for legitimate operational purposes, including:
 
 ## 4. Subprocessors and Data Disclosures
 
-Auctoric shares personal data only with trusted third-party service providers ("Subprocessors") who are contractually bound by rigorous confidentiality and data protection obligations:
-* **Cloud Infrastructure Providers:** Hyperscalers hosting compute, container orchestration, and isolated VPC storage (e.g., AWS, GCP, Azure);
+Auctoric shares personal data only with trusted third-party service providers ("Subprocessors") who are contractually bound by confidentiality and data protection obligations:
+* **Cloud Infrastructure Providers:** Hyperscalers hosting compute, container orchestration, and isolated VPC storage (Google Cloud Platform);
 * **Payment Gateways:** PCI-DSS Level 1 certified processors (e.g., Stripe);
 * **Security & Monitoring Providers:** Managed threat detection, telemetry aggregation, and WAF providers.
 
@@ -63,8 +64,8 @@ An updated list of authorized Subprocessors is published at `[https://auctoric.a
 
 When transferring personal data from the European Economic Area (EEA), the United Kingdom, or Switzerland to countries without an adequacy decision, Auctoric executes:
 * Standard Contractual Clauses (SCCs) approved by the European Commission (Implementing Decision (EU) 2021/914);
-* The UK International Data Transfer Addendum (IDTA);
-* Supplementary technical measures including AES-256 encryption in transit (TLS 1.3) and at rest, zero-knowledge architectural silos, and strict cryptographic access management.
+* The UK International Data Transfer Addendum to the EU SCCs (or UK International Data Transfer Agreement where applicable);
+* Supplementary technical measures including AES-256 encryption in transit (TLS 1.3) and at rest, isolated VPC execution enclaves, and strict cryptographic access management.
 
 ---
 
@@ -72,8 +73,8 @@ When transferring personal data from the European Economic Area (EEA), the Unite
 
 We retain personal data only as long as necessary to fulfill the purposes for which it was collected:
 * **Account Records:** Kept for the duration of the active subscription plus required financial retention periods (typically 7 years for tax/accounting).
-* **System Logs & Audit Traces:** Retained for 365 days for SOC 2 and security forensics compliance, then automatically purged.
-* **Customer Inference Ephemeral Cache:** Real-time inference data in RAM is discarded immediately post-response generation, unless Customer explicitly configures asynchronous logging or custom retention buckets.
+* **System Logs & Audit Traces:** Retained for 365 days for operational security forensics and compliance alignment, then automatically purged.
+* **Customer Inference Ephemeral Enclave:** Real-time inference data in volatile memory is not persisted post-response generation, unless Customer explicitly configures asynchronous logging or custom retention buckets.
 
 ---
 
@@ -94,17 +95,17 @@ To exercise these rights, email `[privacy@auctoric.ai]` or submit a request via 
 
 ## 8. Security Measures
 
-Auctoric implements technical and organizational safeguards certified against ISO 27001, ISO 42001, and SOC 2 Type II controls:
+Auctoric implements technical and organizational safeguards engineered to comply with ISO/IEC 27001:2022, ISO/IEC 42001:2023, and SOC 2 Type II control criteria:
 * Mutual TLS 1.3 encryption across all internal microservice communication and external endpoints;
-* Hardware Security Module (HSM) key management with envelope encryption;
+* KMS key management with envelope encryption;
 * Role-based access control (RBAC), multi-factor authentication (MFA), and least-privilege administrative access;
-* Continuous automated vulnerability scanning and third-party red teaming.
+* Continuous automated vulnerability scanning and independent penetration testing.
 
 ---
 
 ## 9. Contact and Data Protection Officer (DPO)
 
-For inquiries, concerns, or formal privacy complaints, please contact our Data Protection Officer:
+For inquiries, concerns, or formal privacy requests, please contact our Data Protection Officer:
 
 * **Data Protection Officer:** `[Name of DPO / Privacy Officer]`
 * **Email:** `[dpo@auctoric.ai]` or `[privacy@auctoric.ai]`

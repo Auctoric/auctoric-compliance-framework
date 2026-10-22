@@ -1,11 +1,11 @@
 # AI Data Processing & Model Non-Retention Addendum
 
 **Document Reference:** AUC-AIG-ADD-001  
-**Version:** 2.2  
+**Version:** 2.3  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Legal / AI Governance  
-**Companion Documents:** [Master Services Agreement](../legal/master-services-agreement.md) | [Data Processing Addendum](../legal/data-processing-addendum.md)
+**Companion Documents:** [Master Services Agreement](../legal/master-services-agreement.md) | [Data Processing Addendum](../legal/data-processing-addendum.md) | [Schedule 1: AI Service-Specific Terms](../legal/ai-service-specific-terms.md)
 
 ---
 
@@ -20,22 +20,25 @@ This AI Addendum establishes legally binding safeguards and technical guarantees
 ### 1.1 Strict Prohibition on Public Model Training
 Auctoric contractually guarantees and warrants that:
 1. **No Foundation Model Training:** Auctoric will NOT use Customer Content (including prompts, inputs, vector embeddings, context attachments, synthetic data, agent execution traces, or generated outputs) to train, retrain, pre-train, RLHF (reinforcement learning from human feedback), DPO (direct preference optimization), or distill any public, multi-tenant, or foundational AI models.
-2. **Third-Party Model Isolation:** When Auctoric orchestrates inference via third-party foundation model APIs (e.g., Anthropic Claude, OpenAI, Mistral, Google Gemini), Auctoric utilizes enterprise-tier zero-data-retention (ZDR) endpoints where third-party providers are legally bound not to train on Customer inputs or outputs.
+2. **Third-Party Model Isolation:** When Auctoric orchestrates inference via third-party foundation model APIs (e.g., Google Cloud Vertex AI, Microsoft Azure OpenAI, Anthropic Claude), Auctoric utilizes enterprise-tier zero-data-retention (ZDR) endpoints where providers are bound not to train on Customer inputs or outputs.
 
-### 1.2 Ephemeral Inference Enclaves
-By default, real-time inference processing operates in volatile random-access memory (RAM). Prompts and responses exist only for the millisecond duration necessary to generate the token stream and are purged immediately upon completion of the HTTP/gRPC connection, unless Customer explicitly activates persistent audit logging or custom storage buckets.
+### 1.2 Ephemeral Processing Enclaves
+By default, real-time inference processing operates in volatile memory enclaves. Customer Content (prompts and completions) is not retained in persistent model storage following completion of the response, unless Customer explicitly configures persistent audit logging or custom storage buckets. Non-content operational telemetry (token counts, latency, and cryptographic audit hashes) is retained for billing and security monitoring.
 
 ---
 
 ## 2. Customer Fine-Tuned Models & Custom Adapters
 
-### 2.1 Ownership of Custom Model Artifacts
-Where Customer engages Auctoric Services to fine-tune models, train parameter-efficient fine-tuning (PEFT) adapters (e.g., LoRA, QLoRA), or generate specialized vector embeddings:
-* **Customer Ownership:** Customer retains exclusive intellectual property ownership, title, and interest in all fine-tuned weights, adapters, LoRA matrices, and embeddings generated specifically for Customer from Customer Content.
-* **Cryptographic Isolation:** Custom model weights and adapters are encrypted with Customer-Managed Encryption Keys (CMEK) via AWS KMS, GCP KMS, or HashiCorp Vault. No other tenant, nor Auctoric personnel without explicit break-glass authorization, can access or decrypt these weights.
+### 2.1 Ownership of Customization Artifacts
+Where Customer engages Auctoric Services to train parameter-efficient fine-tuning (PEFT) adapters (e.g., LoRA, QLoRA) or generate specialized vector embeddings:
+* **Customer Ownership of Adapters:** Customer retains exclusive intellectual property ownership, title, and interest in newly created fine-tuning adapters, LoRA matrices, and embeddings generated specifically for Customer from Customer Content.
+* **Underlying Provider IP:** Pre-existing foundational models, base weights, and provider-managed model architectures remain subject to their applicable third-party license terms (such as Google Vertex AI Modified Model terms).
+* **Cryptographic Isolation:** Custom model weights and adapters are encrypted with dedicated keys (including Customer-Managed Encryption Keys (CMEK) where supported). No other tenant can access or decrypt these weights.
 
-### 2.2 Model Portability and Deprovisioning
-Upon thirty (30) days' written notice or upon termination of the Services, Customer may request an export of all custom weights, LoRA adapters, and embedding matrices. Upon confirmed export, Auctoric will permanently overwrite and deprovision all instances of the custom model within thirty (30) days in compliance with NIST SP 800-88 Rev 1.
+### 2.2 Model Portability, Deprovisioning, and Sanitization
+Upon thirty (30) days' written notice or upon termination of the Services:
+1. Customer may request an export of extractable, customer-owned parameter adapters (e.g., LoRA matrices) within thirty (30) calendar days;
+2. Following such 30-day export window, or upon customer's confirmed completion of export, Auctoric will permanently deprovision and sanitize all instances of the custom model artifacts within thirty (30) calendar days (total maximum 60 days from termination), in accordance with NIST SP 800-88 Revision 2 media sanitization standards.
 
 ---
 
@@ -61,7 +64,7 @@ flowchart LR
         WAF["WAF & mTLS Gateway"]
         PII["Real-Time PII Masking Filter"]
         Engine["Inference Orchestration Engine"]
-        Memory["RAM Ephemeral Cache (Purged Post-Inference)"]
+        Memory["Volatile RAM Enclave (Purged Post-Inference)"]
         Guard["Safety & Toxicity Guardrail"]
     end
 
@@ -81,29 +84,25 @@ flowchart LR
 ```
 
 ### 4.1 Cryptographic Controls
-* All network traffic is encrypted in transit using TLS 1.3 with ChaCha20-Poly1305 or AES-GCM cipher suites.
-* Static data at rest is encrypted using AES-256 with automated annual key rotation.
+* All network traffic is encrypted in transit using TLS 1.3 with forward secrecy.
+* Static data at rest is encrypted using AES-256 with automated key management.
 
-### 4.2 Differential Privacy & Automated PII Masking
+### 4.2 Automated PII Redaction
 Customer may activate Auctoric’s real-time PII Redactor, which masks credit card numbers, Social Security Numbers, phone numbers, and protected health information (PHI) before prompts hit downstream model inference.
 
 ---
 
-## 5. Audit Rights and Attestation
+## 5. Control Verification and Compliance Alignment
 
-### 5.1 Third-Party Verification
-Auctoric contracts an independent AICPA-accredited CPA firm to audit compliance with these model non-retention and data isolation controls as part of its annual SOC 2 Type II (Privacy & Security Criteria) and ISO/IEC 42001 (AIMS) certifications.
-
-### 5.2 Attestation Delivery
-Auctoric will provide Customer, upon written request and under non-disclosure agreement, the most recent SOC 2 Type II report and ISO 42001 conformity assessment verifying adherence to non-retention commitments.
+Auctoric designs and operates its technical safeguards to comply with the criteria established by **ISO/IEC 42001:2023 (AIMS)**, **ISO/IEC 27001:2022**, and **SOC 2 Type II (Security and Privacy Trust Services Criteria)**. Auctoric maintains documented policies, evidence logs, and testing summaries verifying adherence to these non-retention and data isolation commitments.
 
 ---
 
 ## 6. Model Inversion & AI Security Incidents
 
-In addition to the breach notifications specified in the DPA, Auctoric will notify Customer within **twenty-four (24) hours** if Auctoric confirms:
-1. Any unauthorized model extraction, inversion, or gradient reconstruction attack targeting Customer’s dedicated models or vector embeddings;
-2. Any prompt injection exploit that bypassed perimeter guardrails and exfiltrated Customer Content across tenant boundaries.
+In addition to the breach notifications specified in the DPA, Auctoric will notify Customer within **twenty-four (24) hours** of becoming aware of:
+1. Any verified model extraction, inversion, or gradient reconstruction attack targeting Customer’s dedicated models or vector embeddings;
+2. Any confirmed prompt injection exploit that bypassed perimeter guardrails and exfiltrated Customer Content across tenant boundaries.
 
 ---
 

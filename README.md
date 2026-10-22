@@ -1,8 +1,8 @@
 # Auctoric Governed AI-as-a-System Compliance Framework
 
-[![Compliance Status](https://img.shields.io/badge/Compliance-Production--Ready-emerald.svg)](#master-compliance-matrix)
-[![Security Standards](https://img.shields.io/badge/Security-ISO%2027001%20%7C%20SOC%202%20Type%20II%20%7C%20FedRAMP%20Mod-blue.svg)](docs/security-trust/information-security-policy.md)
-[![AI Governance](https://img.shields.io/badge/AI%20Governance-ISO%2042001%20%7C%20EU%20AI%20Act%20%7C%20NIST%20AI%20RMF-purple.svg)](docs/ai-governance/iso-42001-eu-ai-act-policy.md)
+[![Compliance Status](https://img.shields.io/badge/Compliance-Operational--Alignment-emerald.svg)](#master-compliance-matrix)
+[![Security Standards](https://img.shields.io/badge/Security-ISO%2027001%20Aligned%20%7C%20SOC%202%20Criteria%20Compliant-blue.svg)](docs/security-trust/information-security-policy.md)
+[![AI Governance](https://img.shields.io/badge/AI%20Governance-ISO%2042001%20Aligned%20%7C%20EU%20AI%20Act%20Aligned-purple.svg)](docs/ai-governance/iso-42001-eu-ai-act-policy.md)
 [![IP Protection](https://img.shields.io/badge/IP%20Protection-Customer%20Copyright%20Commitment-orange.svg)](docs/legal/customer-copyright-ip-protection-addendum.md)
 [![RFC 9116](https://img.shields.io/badge/RFC%209116-security.txt-success.svg)](.well-known/security.txt)
 
@@ -43,13 +43,13 @@ flowchart TB
 
         subgraph TelemetryWORM["Audit & Legal Enclave"]
             Audit["Immutable WORM Audit Trail (AU-9)"]
-            Explain["Explainability Engine (SHAP / Counterfactuals)"]
+            Explain["Explainability Module (Supported Models)"]
             CCCShield["Customer Copyright Commitment (CCC) Shield"]
             BOM["Automated SBOM / MBOM Attestations"]
         end
     end
 
-    subgraph FoundationProviders["Stateless Inference Tier (Zero-Retention)"]
+    subgraph FoundationProviders["Stateless Inference Tier (Zero-Retention Routes)"]
         GCP["Google Cloud Vertex AI (Gemini)"]
         Azure["Microsoft Azure OpenAI (GPT-4o)"]
         Anthropic["Anthropic Commercial (Claude)"]
@@ -66,9 +66,9 @@ flowchart TB
 ```
 
 ### Core Architecture Pillars
-* **Modular SST Framework:** Adopts Microsoft's modular architecture separating core universal terms from AI Service-Specific Terms (SST).
+* **Modular SST Framework:** Adopts a modular architecture separating core universal terms from AI Service-Specific Terms (SST).
 * **Harmonized Flow-Down Restrictions:** Directly enforces Google Cloud Vertex AI, Azure OpenAI, and Anthropic upstream restrictions (anti-model distillation, benchmarking bans, clinical medical disclaimers).
-* **Enterprise Customer Copyright Commitment (CCC):** Comprehensive third-party intellectual property output defense modeled after Microsoft and Google enterprise commitments.
+* **Enterprise Customer Copyright Commitment (CCC):** Output defense commitment protecting enterprise customers against third-party copyright claims on generated Outputs.
 * **Zero Model Training on Customer Data:** Legally and architecturally guaranteed isolation ensuring customer prompts, inputs, vector embeddings, and outputs are never ingested into foundation models.
 
 ---
@@ -81,20 +81,20 @@ The following matrix maps Auctoric’s architectural, administrative, and legal 
 | :--- | :--- | :--- | :---: | :--- |
 | **Customer Copyright Commitment (CCC)** | Enterprise Best Practice (MSFT/Google) | Third-party output copyright defense & indemnification | **Active Commitment** | [Customer Copyright Addendum](docs/legal/customer-copyright-ip-protection-addendum.md) |
 | **Multi-Cloud Flow-Down Terms** | Google / Microsoft / Anthropic | Anti-distillation, non-reverse engineering, benchmarking | **Harmonized** | [AI Service-Specific Terms](docs/legal/ai-service-specific-terms.md), [AUP](docs/legal/acceptable-use-policy.md) |
-| **ISO/IEC 42001:2023** | ISO / IEC (Global) | Artificial Intelligence Management System (AIMS) | **Certified / Fully Aligned** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md) |
-| **EU AI Act (Reg (EU) 2024/1689)** | European Parliament / EU AI Office | Risk-based AI regulation, High-Risk AI conformity | **Conformant** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md), [ADM Notice](docs/ai-governance/automated-decision-making-notice.md) |
-| **NIST AI RMF 1.0** | NIST / U.S. Dept. of Commerce | AI Risk Management Framework (Govern, Map, Measure, Manage) | **Fully Aligned** | [Responsible AI & Ethics Statement](docs/ai-governance/responsible-ai-ethics-statement.md) |
+| **ISO/IEC 42001:2023** | ISO / IEC (Global) | Artificial Intelligence Management System (AIMS) Control Criteria | **Designed for Compliance / Aligned** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md) |
+| **EU AI Act (Reg (EU) 2024/1689)** | European Parliament / EU AI Office | Risk-based AI regulation, High-Risk AI conformity | **Conformant / Aligned** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md), [ADM Notice](docs/ai-governance/automated-decision-making-notice.md) |
+| **NIST AI RMF 1.0** | NIST / U.S. Dept. of Commerce | AI Risk Management Framework (Govern, Map, Measure, Manage) | **Aligned** | [Responsible AI & Ethics Statement](docs/ai-governance/responsible-ai-ethics-statement.md) |
 | **OWASP LLM Top 10 (2025/2026)** | OWASP Foundation | Vulnerabilities in Large Language Model Applications | **Mitigated at Runtime** | [SSDLC Policy](docs/technical-standards/ssdlc-policy.md), [Shared Responsibility Matrix](docs/security-trust/shared-responsibility-matrix.md) |
-| **SOC 2 Type II** | AICPA (United States) | Trust Services Criteria (Security, Availability, Confidentiality, Privacy) | **Annual Audited Attestation** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
-| **ISO/IEC 27001:2022** | ISO / IEC (Global) | Information Security Management System (ISMS) | **Certified** | [Information Security Policy](docs/security-trust/information-security-policy.md) |
-| **FedRAMP (Moderate Equivalent)** | FedRAMP PMO / GSA | Cloud security baseline for US federal agencies (NIST SP 800-53 Rev. 5) | **Moderate Baseline Implemented** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
-| **CMMC 2.0 (Level 2)** | U.S. Department of Defense | Cybersecurity Maturity Model Certification (CUI Protection) | **Level 2 Control Set Active** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
+| **SOC 2 Type II** | AICPA (United States) | Trust Services Criteria (Security, Availability, Confidentiality, Privacy) | **Compliant with Criteria** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
+| **ISO/IEC 27001:2022** | ISO / IEC (Global) | Information Security Management System (ISMS) Control Alignment | **Compliant / Aligned** | [Information Security Policy](docs/security-trust/information-security-policy.md) |
+| **FedRAMP (Moderate Equivalent)** | FedRAMP PMO / GSA | Cloud security baseline for US federal agencies (NIST SP 800-53 Rev. 5) | **Designed to Align with Moderate Baseline** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
+| **CMMC 2.0 (Level 2)** | U.S. Department of Defense | Cybersecurity Maturity Model Certification (CUI Protection Alignment) | **Aligned with Level 2 Controls** | [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) |
 | **HIPAA / HITECH Act** | HHS / OCR (United States) | Safeguards for electronic Protected Health Information (ePHI) | **BAA Supported / Compliant** | [HIPAA Business Associate Agreement](docs/sector-compliance/hipaa-baa.md) |
-| **GDPR / UK GDPR** | European Union / UK ICO | Data privacy, processor obligations, international transfers, ADM | **Fully Compliant** | [DPA with SCCs](docs/legal/data-processing-addendum.md), [Privacy Policy](docs/legal/global-privacy-policy.md) |
-| **FBI CJIS Security Policy** | Federal Bureau of Investigation | Criminal Justice Information (CJI) protection | **MCA / Addendum Ready** | [CJIS Security Addendum & MCA](docs/sector-compliance/cjis-security-addendum-mca.md) |
-| **PCI-DSS v4.0.1** | PCI Security Standards Council | Cardholder Data Environment protection | **SAQ-A / Edge Redaction** | [PCI-DSS Matrix & AoC Summary](docs/security-trust/pci-dss-matrix-aoc.md) |
-| **WCAG 2.2 Level AA** | W3C / WAI (Global) | Web Content Accessibility Guidelines | **Supports** | [VPAT / Section 508 / WCAG Statement](docs/accessibility/vpat-wcag22aa-section508.md) |
-| **Section 508** | U.S. Access Board / Rehabilitation Act | Federal accessibility conformance for IT products | **Supports (VPAT 2.5)** | [VPAT / Section 508 / WCAG Statement](docs/accessibility/vpat-wcag22aa-section508.md) |
+| **GDPR / UK GDPR** | European Union / UK ICO | Data privacy, processor obligations, international transfers, ADM | **Compliant** | [DPA with SCCs](docs/legal/data-processing-addendum.md), [Privacy Policy](docs/legal/global-privacy-policy.md) |
+| **FBI CJIS Security Policy (v6.1)** | Federal Bureau of Investigation | Criminal Justice Information (CJI) protection | **Addendum Ready / Workload Restricted** | [CJIS Security Addendum](docs/sector-compliance/cjis-security-addendum-mca.md) |
+| **PCI-DSS v4.0.1** | PCI Security Standards Council | Cardholder Data Environment protection | **SAQ-A Compliant for Billing / Prompt Redaction Active** | [PCI-DSS Matrix & Summary](docs/security-trust/pci-dss-matrix-aoc.md) |
+| **WCAG 2.2 Level AA** | W3C / WAI (Global) | Web Content Accessibility Guidelines | **Interim Assessment: Supports** | [VPAT / Section 508 / WCAG Statement](docs/accessibility/vpat-wcag22aa-section508.md) |
+| **Section 508** | U.S. Access Board / Rehabilitation Act | Federal accessibility conformance for IT products | **Interim Assessment: Supports** | [VPAT / Section 508 / WCAG Statement](docs/accessibility/vpat-wcag22aa-section508.md) |
 
 ---
 
@@ -116,26 +116,26 @@ auctoric-compliance-framework/
     │   ├── customer-copyright-ip-protection-addendum.md# Customer Copyright Commitment (CCC) Defense
     │   ├── global-privacy-policy.md                   # Comprehensive GDPR/CCPA privacy notice
     │   ├── acceptable-use-policy.md                   # Harmonized AUP with Google/Anthropic flow-downs
-    │   └── data-processing-addendum.md                # Art. 28 GDPR DPA with EU/UK SCCs
+    │   └── data-processing-addendum.md                # Art. 28 GDPR DPA with EU/UK SCCs & CCPA Terms
     ├── ai-governance/                                 # AI-specific safety, ethics & statutory policies
-    │   ├── iso-42001-eu-ai-act-policy.md              # Comprehensive AIMS & EU AI Act governance
+    │   ├── iso-42001-eu-ai-act-policy.md              # AIMS Governance & EU AI Act policy
     │   ├── ai-dpa-model-non-retention-addendum.md      # Model non-retention & customer IP covenant
     │   ├── responsible-ai-ethics-statement.md         # Core principles & ethical red-lines
     │   └── automated-decision-making-notice.md        # ADM logic, explainability & consumer rights
     ├── security-trust/                                # Enterprise cybersecurity & trust frameworks
     │   ├── information-security-policy.md             # ISO 27001 / SOC 2 Information Security Policy
     │   ├── shared-responsibility-matrix.md            # Tripartite CSP vs. Auctoric vs. Customer RACI model
-    │   ├── system-security-plan-summary.md            # FedRAMP / NIST SP 800-53 Rev 5 SSP overview
-    │   └── pci-dss-matrix-aoc.md                      # PCI-DSS v4.0.1 responsibility matrix & AoC
+    │   ├── system-security-plan-summary.md            # NIST SP 800-53 Rev 5 Moderate SSP summary (GCP)
+    │   └── pci-dss-matrix-aoc.md                      # PCI-DSS v4.0.1 responsibility matrix & SAQ-A summary
     ├── sector-compliance/                             # Regulated industry compliance instruments
     │   ├── hipaa-baa.md                               # Business Associate Agreement for ePHI
-    │   └── cjis-security-addendum-mca.md              # FBI CJIS Management Control Agreement & Addendum
+    │   └── cjis-security-addendum-mca.md              # FBI CJIS Security Addendum (v6.1 aligned)
     ├── technical-standards/                           # Engineering, supply chain & disclosure policies
     │   ├── ssdlc-policy.md                            # Secure SDLC, threat modeling & CI/CD gates
     │   ├── vulnerability-disclosure-policy.md         # Coordinated vulnerability disclosure & Safe Harbor
     │   └── sbom-mbom-guidelines.md                    # CycloneDX SBOM & Model BOM architecture
     ├── accessibility/                                 # Accessibility standards & procurement filings
-    │   └── vpat-wcag22aa-section508.md                # Voluntary Product Accessibility Template (VPAT 2.5)
+    │   └── vpat-wcag22aa-section508.md                # VPAT 2.5 interim self-assessment statement
     └── governance/                                    # Corporate ethics, reporting & whistleblower safeguards
         ├── code-of-ethics.md                          # Code of Ethics and Business Conduct
         └── whistleblower-policy.md                    # Whistleblower protections & hotline procedures
@@ -147,13 +147,13 @@ auctoric-compliance-framework/
 * [Master Services Agreement (MSA)](docs/legal/master-services-agreement.md) — Enterprise subscription terms, modular SST integration, AI warranties, intellectual property allocations, and liability terms.
 * [Terms of Service (ToS)](docs/legal/terms-of-service.md) — Self-service developer and API access conditions, rate quotas, and acceptable usage rules.
 * [Schedule 1: AI Service-Specific Terms (SST)](docs/legal/ai-service-specific-terms.md) — Multi-cloud model routing, anti-distillation flow-downs, autonomous agent rules, and clinical triage disclaimers.
-* [Customer Copyright & IP Protection Addendum](docs/legal/customer-copyright-ip-protection-addendum.md) — Legally binding output defense protecting enterprise customers against third-party copyright claims.
+* [Customer Copyright & IP Protection Addendum](docs/legal/customer-copyright-ip-protection-addendum.md) — Output defense protecting enterprise customers against third-party copyright claims.
 * [Global Privacy Policy](docs/legal/global-privacy-policy.md) — Comprehensive privacy disclosures covering GDPR, CCPA/CPRA, and international data transfers.
 * [Acceptable Use Policy (AUP)](docs/legal/acceptable-use-policy.md) — Harmonized safety restrictions incorporating Google Cloud Generative AI and Anthropic prohibited use policies.
-* [Data Processing Addendum (DPA) with SCCs](docs/legal/data-processing-addendum.md) — Article 28 GDPR processor agreement including Standard Contractual Clauses (Modules 2 & 3).
+* [Data Processing Addendum (DPA) with SCCs](docs/legal/data-processing-addendum.md) — Article 28 GDPR processor agreement including Standard Contractual Clauses (Modules 2 & 3) and CCPA § 7051 terms.
 
 #### 🤖 AI Governance Documents
-* [ISO 42001 & EU AI Act Governance Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md) — Artificial Intelligence Management System (AIMS) manual and EU AI Act conformity.
+* [ISO 42001 & EU AI Act Governance Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md) — Artificial Intelligence Management System (AIMS) manual and EU AI Act alignment.
 * [AI DPA & Model Non-Retention Addendum](docs/ai-governance/ai-dpa-model-non-retention-addendum.md) — Legally binding zero-training covenants and custom model IP guarantees.
 * [Responsible AI & Ethics Statement](docs/ai-governance/responsible-ai-ethics-statement.md) — Foundational ethical commitments, human-in-the-loop oversight, and absolute red lines.
 * [Automated Decision-Making (ADM) Notice](docs/ai-governance/automated-decision-making-notice.md) — Transparency notice detailing algorithmic explainability and human contestability rights.
@@ -161,12 +161,12 @@ auctoric-compliance-framework/
 #### 🛡️ Security & Trust Documents
 * [Information Security Policy (ISP)](docs/security-trust/information-security-policy.md) — Enterprise security policy covering Zero Trust, MFA, cryptography, and DR.
 * [Shared Responsibility Matrix](docs/security-trust/shared-responsibility-matrix.md) — Comprehensive tripartite matrix delineating Cloud Provider, Auctoric, and Customer obligations.
-* [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) — FedRAMP Moderate / NIST SP 800-53 Rev. 5 authorization boundary summary.
-* [PCI-DSS Matrix & AoC Summary](docs/security-trust/pci-dss-matrix-aoc.md) — PCI-DSS v4.0.1 scoping, tokenized payment flows, and edge cardholder redaction.
+* [System Security Plan (SSP) Summary](docs/security-trust/system-security-plan-summary.md) — NIST SP 800-53 Rev. 5 Moderate authorization boundary summary (GCP).
+* [PCI-DSS Matrix & Summary](docs/security-trust/pci-dss-matrix-aoc.md) — PCI-DSS v4.0.1 scoping, tokenized payment flows, and edge cardholder redaction.
 
 #### 🏛️ Sector-Specific Compliance
 * [HIPAA Business Associate Agreement (BAA)](docs/sector-compliance/hipaa-baa.md) — Statutory safeguards and non-training guarantees for electronic Protected Health Information (ePHI).
-* [CJIS Security Addendum & Management Control Agreement (MCA)](docs/sector-compliance/cjis-security-addendum-mca.md) — FBI CJIS compliance for law enforcement agency deployments.
+* [CJIS Security Addendum](docs/sector-compliance/cjis-security-addendum-mca.md) — FBI CJIS Security Policy v6.1 compliance for law enforcement agency deployments.
 
 #### ⚙️ Technical Standards & Engineering
 * [Secure Software Development Lifecycle (SSDLC) Policy](docs/technical-standards/ssdlc-policy.md) — Shift-left engineering controls, CI/CD gates, and AI adversarial red teaming.
@@ -174,7 +174,7 @@ auctoric-compliance-framework/
 * [SBOM and MBOM Architecture Guidelines](docs/technical-standards/sbom-mbom-guidelines.md) — CycloneDX v1.6 supply chain specifications for software and model weights.
 
 #### ♿ Accessibility
-* [Accessibility Conformance Statement (VPAT / WCAG 2.2 AA / Section 508)](docs/accessibility/vpat-wcag22aa-section508.md) — Formal VPAT 2.5 accessibility evaluation.
+* [Accessibility Conformance Statement (VPAT / WCAG 2.2 AA / Section 508)](docs/accessibility/vpat-wcag22aa-section508.md) — Formal VPAT 2.5 interim self-assessment.
 
 #### ⚖️ Corporate Governance
 * [Code of Ethics & Business Conduct](docs/governance/code-of-ethics.md) — Corporate ethical rules, anti-corruption (FCPA), and asset protection standards.

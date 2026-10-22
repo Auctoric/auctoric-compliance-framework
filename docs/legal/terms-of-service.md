@@ -1,11 +1,11 @@
 # Terms of Service (ToS)
 
 **Document Reference:** AUC-LEG-TOS-001  
-**Version:** 4.0  
+**Version:** 4.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Public / Legal  
-**Architectural Framework:** Microsoft Modular Self-Service Structure + Google Flow-Down Provisions  
+**Architectural Framework:** Modular Self-Service Structure + Upstream Flow-Down Provisions  
 **Incorporated Schedules:** [Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md) | [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md) | [Acceptable Use Policy (AUP)](acceptable-use-policy.md)
 
 ---
@@ -13,6 +13,8 @@
 Welcome to **Auctoric**! These Terms of Service ("**Terms**") govern your access to and use of the website, APIs, software development kits (SDKs), documentation, developer console, and Governed AI-as-a-System platform services (collectively, the "**Services**") provided by **[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our").
 
 By creating an account, calling our APIs, embedding our SDKs, or otherwise accessing the Services, you ("**User**" or "**You**") agree to be bound by these Terms and the incorporated [Schedule 1: AI Service-Specific Terms](ai-service-specific-terms.md). If you are using the Services on behalf of an organization, you represent that you have authority to bind that entity, and "you" refers to that organization.
+
+**Enterprise Account Carve-Out:** Where an executed Master Services Agreement governs Customer’s use of the Services, that Master Services Agreement shall supersede and govern over these self-service Terms of Service.
 
 ---
 
@@ -25,7 +27,7 @@ These Terms govern your general account relationship, authentication, and platfo
 ## 2. Eligibility & Account Security
 
 ### 2.1 Eligibility
-You must be at least 18 years of age (or the age of majority in your jurisdiction) to use the Services.
+You must be at least 18 years of age (or the age of majority in your jurisdiction) to use the Services. You warrant that you will not deploy Customer Applications to target, market to, or be intentionally accessed by individuals under 18 years of age.
 
 ### 2.2 Credential Protection
 You are strictly responsible for safeguarding your credentials, API keys, client secrets, and access tokens. Any actions, API consumption, or agent workflows executed through your credentials are your legal responsibility. If you suspect an unauthorized compromise, notify `[security@auctoric.ai]` immediately.
@@ -49,10 +51,10 @@ Because Auctoric orchestrates workloads across foundation model providers (inclu
 ## 4. Acceptable Use and High-Risk Boundaries
 
 You must strictly comply with our [Acceptable Use Policy](acceptable-use-policy.md). In particular, you shall not use the Services for:
-* **Clinical Medical Decisions:** Autonomous medical diagnosis, treatment planning, or emergency triage without licensed medical professional oversight;
+* **Clinical Medical Decisions:** Automated clinical medical diagnosis, patient-specific treatment planning, or emergency triage (non-clinical administrative healthcare operations with human sign-off are permitted);
 * **Critical Infrastructure:** Nuclear facilities, public utility power grids, air traffic control, or life support systems;
 * **Prohibited AI Practices:** Social scoring, biometric categorization of sensitive traits, or subliminal manipulation banned under the EU AI Act;
-* **Cyberweapons & Exploitation:** Generating malware, automated hacking tools, or executing prompt injection attacks against platform infrastructure.
+* **Cyberweapons & Exploitation:** Generating malware, automated hacking tools, or executing prompt injection attacks against platform infrastructure (except for authorized testing per the [Vulnerability Disclosure Policy](../technical-standards/vulnerability-disclosure-policy.md)).
 
 ---
 
@@ -64,7 +66,7 @@ You must strictly comply with our [Acceptable Use Policy](acceptable-use-policy.
 * **Zero Model Training on Customer Data:** Auctoric does **not** use Customer Inputs or Outputs to train, fine-tune, or calibrate public foundational models or any third-party models. See our [AI DPA & Model Non-Retention Addendum](../ai-governance/ai-dpa-model-non-retention-addendum.md).
 
 ### 5.2 Customer Copyright Commitment (Output Defense)
-Paid commercial users are protected by our enterprise **Customer Copyright Commitment**, defending against third-party copyright claims on AI Outputs provided Auctoric's built-in safety filters remained active. Full terms and covenants are set forth in the [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md).
+Paid commercial subscribers are eligible for defense against third-party copyright claims on Covered Outputs under the terms and conditions of the [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md), provided built-in safety filters remained active.
 
 ---
 
@@ -84,7 +86,7 @@ You may cancel your self-service subscription at any time via the Auctoric Conso
 YOU EXPRESSLY UNDERSTAND AND AGREE THAT ARTIFICIAL INTELLIGENCE MODELS EMPLOY STATISTICAL PATTERN PREDICTION AND CAN PRODUCE INCORRECT, FACTUALLY INACCURATE, OR UNINTENDED RESULTS ("HALLUCINATIONS"). YOU MUST INDEPENDENTLY VERIFY ALL CRITICAL OUTPUTS BEFORE RELYING UPON THEM.
 
 ### 7.2 Disclaimer of Warranties
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY. AUCTORIC DESIGNS ITS CONTROLS TO COMPLY WITH INDUSTRY STANDARDS, BUT DISCLAIMS ANY REPRESENTATION OF UNCONDITIONAL PERFECTION OR UNINTERRUPTED OPERATION.
 
 ### 7.3 Limitation of Liability
 IN NO EVENT SHALL AUCTORIC BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES. AUCTORIC’S MAXIMUM AGGREGATE LIABILITY FOR ALL CLAIMS UNDER THESE TERMS SHALL NOT EXCEED THE GREATER OF ONE HUNDRED US DOLLARS ($100 USD) OR THE AMOUNT YOU PAID AUCTORIC IN THE THREE (3) MONTHS PRECEDING THE CLAIM.

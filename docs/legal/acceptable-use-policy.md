@@ -1,7 +1,7 @@
 # Acceptable Use Policy (AUP)
 
 **Document Reference:** AUC-LEG-AUP-001  
-**Version:** 3.0  
+**Version:** 3.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Public / Legal & Safety  
@@ -23,8 +23,8 @@ You agree not to use the Services, or allow any third party to use the Services,
 
 ### 2.1 Healthcare & Clinical Decision-Making (Google Cloud Alignment)
 1. **Automated Medical Diagnosis:** Providing automated, unsupervised clinical diagnostic assessments, medical triage, or patient care instructions;
-2. **Prescription & Treatment Planning:** Generating, modifying, or authorizing pharmaceutical prescriptions or medical treatment plans without qualified, licensed human healthcare provider oversight;
-3. **Medical Device Functionality:** Operating the platform as an uncertified Software-as-a-Medical-Device (SaMD) subject to FDA, EMA, or EU MDR 2017/745 regulatory approval.
+2. **Prescription & Treatment Planning:** Generating, modifying, or authorizing pharmaceutical prescriptions or medical treatment plans. Neither the presence of licensed professional supervision, nor a customer’s regulated healthcare status, nor the execution of a HIPAA Business Associate Agreement authorizes a clinical use prohibited by an underlying foundation model provider;
+3. **Medical Device Functionality:** Operating the platform as an uncertified Software-as-a-Medical-Device (SaMD) subject to FDA, EMA, or EU MDR 2017/745 regulatory approval. Non-clinical administrative healthcare workflows (such as scheduling or billing drafting) are permitted where verified by administrative staff before finalization.
 
 ### 2.2 Critical Infrastructure & Kinetic Systems (Google & Anthropic Alignment)
 1. **Critical Infrastructure Control:** Deploying autonomous agentic workflows to directly monitor, operate, or control nuclear energy facilities, electric power grids, water treatment plants, or public utility distribution networks;
@@ -45,7 +45,7 @@ You agree not to use the Services, or allow any third party to use the Services,
 
 ### 2.5 Cyberattacks, Exploitation, and Model Distillation
 1. **Malicious Payloads:** Generating polymorphic malware, ransomware, exploit scripts, or automated vulnerability scanning tools for unauthorized target exploitation;
-2. **Adversarial Jailbreaking & Attacks:** Conducting prompt injection attacks, model inversion, or safety classifier bypasses against Auctoric or upstream hyperscaler infrastructure;
+2. **Adversarial Jailbreaking & Attacks:** Conducting prompt injection attacks, model inversion, or safety classifier bypasses against Auctoric or upstream hyperscaler infrastructure (except for authorized, good-faith security research conducted in strict accordance with the [Vulnerability Disclosure Policy](../technical-standards/vulnerability-disclosure-policy.md));
 3. **Anti-Model Distillation:** Using inference outputs to train, fine-tune, bootstrap, or calibrate any machine learning or foundation model that competes with Auctoric, Google Cloud, Microsoft Azure, or Anthropic;
 4. **Credential Harvesting & Phishing:** Orchestrating automated spear-phishing, credential stuffing, or social engineering campaigns.
 
@@ -81,7 +81,7 @@ To maintain compliance with Google Cloud and our multi-cloud hyperscaler stack:
 Upon discovering or receiving a credible report of an AUP violation, Auctoric may:
 1. Issue formal compliance remediation warnings;
 2. Impose real-time rate throttles or restrict specific model routes;
-3. Immediately suspend API keys or terminate the customer account;
+3. Immediately suspend API keys or terminate the customer account where reasonably necessary to protect platform stability or comply with law, providing notice and identifying restoration conditions as soon as practicable;
 4. Report severe violations (including CSAM, terrorist content, or critical infrastructure threats) to law enforcement and national market surveillance authorities.
 
 ### 5.2 Upstream Hyperscaler Escalation
@@ -99,4 +99,4 @@ If you believe a request was blocked or an account suspended due to an erroneous
 
 * **Email:** `[safety@auctoric.ai]` or `[trust@auctoric.ai]`
 * **Online Incident Form:** `[https://auctoric.ai/safety/report-violation]`
-* **RFC 9116 Vulnerability Disclosures:** Refer to [security.txt](../../.well-known/security.txt)
+* **Coordinated Vulnerability Disclosures:** Refer to [Vulnerability Disclosure Policy](../technical-standards/vulnerability-disclosure-policy.md) and [.well-known/security.txt](../../.well-known/security.txt)

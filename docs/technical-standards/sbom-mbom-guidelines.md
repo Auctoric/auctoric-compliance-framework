@@ -1,7 +1,7 @@
 # SBOM and MBOM Architecture Guidelines
 
 **Document Reference:** AUC-TECH-BOM-001  
-**Version:** 2.0  
+**Version:** 2.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Technical Standard / Engineering Reference  
@@ -11,12 +11,12 @@
 
 ## 1. Overview and Rationale
 
-In modern cloud-native and AI-driven platforms, supply chain transparency is a core security prerequisite. **[Auctoric, Inc.]** ("**Auctoric**") enforces end-to-end supply chain visibility across both classical software dependencies and artificial intelligence models through:
+In modern cloud-native and AI-driven platforms, supply chain transparency is a core security prerequisite. **[Auctoric, Inc.]** ("**Auctoric**") enforces supply chain visibility across both classical software dependencies and artificial intelligence models through:
 
 1. **Software Bill of Materials (SBOM):** Machine-readable inventory of software components, third-party libraries, container layers, and licenses.
 2. **Model Bill of Materials (MBOM):** Structured inventory of machine learning models, weights, training dataset provenance, tokenizers, fine-tuning checkpoints, and evaluation benchmarks.
 
-These guidelines define the generation, signing, validation, and publication standards for all Auctoric deliverables.
+These guidelines define the generation, signing, validation, and publication standards for Auctoric deliverables.
 
 ---
 
@@ -34,12 +34,12 @@ flowchart LR
     end
 
     subgraph Registries["Secure Artifact Registries"]
-        Attest --> OCI["OCI Container Registry (AWS ECR / Harbor)"]
-        Attest --> ModelReg["Encrypted Model Registry (S3 / MLflow)"]
+        Attest --> OCI["OCI Container Registry (Google Artifact Registry)"]
+        Attest --> ModelReg["Encrypted Model Registry (Cloud Storage / MLflow)"]
     end
 
     subgraph Consumers["Downstream Verification"]
-        OCI --> Verify["Customer / Federal Auditor Verification via Cosign"]
+        OCI --> Verify["Customer / Auditor Verification via Cosign"]
     end
 ```
 
@@ -49,7 +49,7 @@ flowchart LR
 
 ### 3.1 Standard & Schema Format
 * **Mandatory Format:** **CycloneDX v1.6 JSON** (Primary) or **SPDX 3.0 JSON** (Secondary upon federal requirement).
-* **Compliance:** Fulfills the National Telecommunications and Information Administration (NTIA) Minimum Elements for an SBOM under Executive Order 14028.
+* **Compliance Alignment:** Fulfills the National Telecommunications and Information Administration (NTIA) Minimum Elements for an SBOM under Executive Order 14028.
 
 ### 3.2 Required Metadata Fields
 Every generated SBOM must include:
@@ -72,8 +72,8 @@ Artificial intelligence models introduce unique supply chain risks, such as back
 | :--- | :--- | :--- |
 | **Model Identity** | `model-name`, `architecture`, `version` | Name, foundational architecture (e.g., Transformer, MoE), parameter size (e.g., 70B). |
 | **Base Weights & Hashes** | `checkpoint-sha256`, `format` | Cryptographic SHA-256 hash of model tensors (Safetensors / GGUF). Pickle files are strictly banned. |
-| **Dataset Lineage** | `pre-training-corpus`, `fine-tuning-data` | Data provenance identifiers, curation dates, synthetic ratio, licensing terms. |
-| **Quantization & Compute** | `quantization-level`, `precision` | Precision format (FP16, BF16, FP8, INT4 AWQ), target hardware accelerator (NVIDIA H100/H200). |
+| **Dataset Lineage** | `pre-training-corpus`, `fine-tuning-data` | Data provenance identifiers, curation dates, synthetic ratio, licensing terms where available from upstream providers. |
+| **Quantization & Compute** | `quantization-level`, `precision` | Precision format (FP16, BF16, FP8, INT4 AWQ), target hardware accelerator (TPU v5 / NVIDIA H100). |
 | **Tokenizer Configuration** | `vocab-size`, `tokenizer-hash` | Vocabulary size, special token definitions (BOS, EOS, PAD), tokenizer checksum. |
 | **Alignment & Safety** | `alignment-technique`, `guardrails` | Fine-tuning method (RLHF, DPO, KTO), embedded system prompt hash, benchmark safety scores. |
 
@@ -120,9 +120,9 @@ Artificial intelligence models introduce unique supply chain risks, such as back
 
 ## 5. Build Pipeline Automation and Verification
 
-1. **Automated Generation:** Generated during every CI release build using `syft` and Auctoric’s proprietary `mbom-extractor`.
-2. **Cryptographic Signing:** Signed automatically using **Sigstore Cosign** with automated keyless OIDC signing tied to Auctoric’s corporate GitHub organization.
-3. **In-Toto Attestations:** Build provenance attestations (SLSA Level 3) stored directly in the OCI registry alongside container artifacts.
+1. **Automated Generation:** Generated during CI release builds using `syft` and Auctoric’s `mbom-extractor`.
+2. **Cryptographic Signing:** Signed using **Sigstore Cosign** with automated keyless OIDC signing tied to Auctoric’s corporate GitHub organization.
+3. **In-Toto Attestations:** Build provenance attestations (SLSA Level 3 criteria) stored directly in the OCI registry alongside container artifacts.
 4. **Customer Verification:** Enterprise customers can verify release integrity using the public Cosign verification key:
    ```bash
    cosign verify --key https://auctoric.ai/security/cosign.pub registry.auctoric.ai/platform/engine:v2.4
@@ -132,7 +132,7 @@ Artificial intelligence models introduce unique supply chain risks, such as back
 
 ## 6. Access and Customer Distribution
 
-Enterprise customers and federal procurement auditors may access current SBOM and MBOM inventories:
+Enterprise customers and auditors may access current SBOM and MBOM inventories:
 * **Via API:** `GET /api/v1/compliance/bom?artifact_id={ID}`
 * **Via Portal:** Downloadable through the Auctoric Trust Portal (`[https://trust.auctoric.ai/bom]`)
 * **Security Inquiries:** `[supply-chain-security@auctoric.ai]`

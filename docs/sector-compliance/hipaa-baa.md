@@ -1,15 +1,15 @@
 # HIPAA Business Associate Agreement (BAA)
 
 **Document Reference:** AUC-SEC-BAA-001  
-**Version:** 3.0  
+**Version:** 3.1  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Legal / Healthcare Sector Compliance  
-**Regulatory Standards:** Health Insurance Portability and Accountability Act of 1996 (HIPAA) | Health Information Technology for Economic and Clinical Health (HITECH) Act | Omnibus Rule (45 CFR Parts 160 & 164)
+**Regulatory Baselines:** Health Insurance Portability and Accountability Act of 1996 (HIPAA) | Health Information Technology for Economic and Clinical Health (HITECH) Act | Omnibus Rule (45 CFR Parts 160 & 164)
 
 ---
 
-This Business Associate Agreement ("**BAA**") is entered into by and between **[Auctoric, Inc.]** ("**Business Associate**" or "**Auctoric**") and the customer entity identified in the underlying Master Services Agreement ("**Covered Entity**" or "**Customer**").
+This Business Associate Agreement ("**BAA**") is entered into by and between **[Auctoric, Inc.]** ("**Business Associate**" or "**Auctoric**") and the customer entity identified in the underlying Master Services Agreement ("**Covered Entity**" or "**Customer**", or Customer acting as a Business Associate on behalf of third-party covered entities).
 
 WHEREAS, Covered Entity is subject to the requirements of HIPAA and HITECH, and wishes to utilize the Auctoric Governed AI Platform to process, store, or transmit electronic Protected Health Information ("**ePHI**");
 
@@ -21,7 +21,7 @@ NOW, THEREFORE, the parties agree to the following terms and conditions:
 
 * **"Breach"** shall have the same meaning as given in 45 CFR § 164.402, generally denoting the acquisition, access, use, or disclosure of Protected Health Information in a manner not permitted under Subpart E of 45 CFR Part 164 that compromises the security or privacy of the PHI.
 * **"Designated Record Set"** shall have the same meaning as given in 45 CFR § 164.501.
-* **"Electronic Protected Health Information" ("ePHI")** means Protected Health Information transmitted or maintained in electronic media, as defined in 45 CFR § 160.103.
+* **"Electronic Protected Health Information" ("ePHI")** means Protected Health Information created, received, maintained, or transmitted in electronic media on behalf of Covered Entity, as defined in 45 CFR § 160.103.
 * **"Individual"** shall have the same meaning as given in 45 CFR § 160.103 and includes persons who qualify as a personal representative under 45 CFR § 164.502(g).
 * **"Privacy Rule"** means the Standards for Privacy of Individually Identifiable Health Information at 45 CFR Part 160 and Part 164, Subparts A and E.
 * **"Security Rule"** means the Health Insurance Reform: Security Standards at 45 CFR Part 160 and Part 164, Subparts A and C.
@@ -52,14 +52,26 @@ Business Associate shall implement and maintain administrative, physical, and te
 * **Access Control:** Phishing-resistant Multi-Factor Authentication (MFA) and least-privilege role-based access control (RBAC).
 
 ### 3.2 Reporting of Breaches and Security Incidents
-1. **Breach of Unsecured PHI:** Business Associate shall notify Covered Entity in writing without unreasonable delay, and in no event later than **ten (10) business days** after discovery of a confirmed Breach of Unsecured PHI.
+1. **Breach of Unsecured PHI:** Business Associate shall notify Covered Entity in writing without unreasonable delay, and in no event later than **ten (10) business days** after **Discovery** of a Breach of Unsecured PHI. For purposes of this BAA, "Discovery" shall be determined in strict accordance with 45 CFR § 164.410, occurring on the first day on which such breach is known to Business Associate, or by exercising reasonable diligence would have been known.
 2. **Security Incident Reporting:** Business Associate shall report to Covered Entity any successful unauthorized access, use, disclosure, modification, or destruction of ePHI. The parties acknowledge that unsuccessful attempts (e.g., automated port scans, unsuccessful pings, blocked firewall probes) occur continuously and that this Section constitutes notice without obligation to report such routine unsuccessful attempts.
 
 ### 3.3 Subcontractors & Subprocessors
 In accordance with 45 CFR §§ 164.502(e)(1)(ii) and 164.308(b)(2), Business Associate shall ensure that any subcontractor or agent that creates, receives, maintains, or transmits ePHI on behalf of Business Associate agrees to the same restrictions, conditions, and requirements that apply to Business Associate with respect to such information.
 
 ### 3.4 Access to Books and Records
-Business Associate shall make its internal practices, books, and records relating to the use and disclosure of ePHI available to the Secretary of Health and Human Services (HHS) for purposes of determining Covered Entity's or Business Associate's compliance with HIPAA.
+Business Associate shall make its internal practices, books, and records relating to the use and disclosure of ePHI available to the Secretary of Health and Human Services (HHS) for purposes of determining compliance with HIPAA.
+
+### 3.5 Access to PHI in Designated Record Sets
+Business Associate shall make available electronic PHI in a Designated Record Set as necessary for Covered Entity to satisfy its obligations under 45 CFR § 164.524, within ten (10) business days of a verified written request.
+
+### 3.6 Amendment of PHI
+Business Associate shall incorporate any amendments to electronic PHI in a Designated Record Set as directed by Covered Entity pursuant to 45 CFR § 164.526, within ten (10) business days of request.
+
+### 3.7 Accounting of Disclosures
+Business Associate shall maintain and make available the information required to provide an accounting of disclosures of electronic PHI in accordance with 45 CFR § 164.528, within fifteen (15) business days of request.
+
+### 3.8 Delegated Privacy Rule Obligations
+To the extent Business Associate is authorized to carry out one or more of Covered Entity's obligations under Subpart E of 45 CFR Part 164, Business Associate shall comply with the requirements of Subpart E that apply to Covered Entity in the performance of such obligations.
 
 ---
 
@@ -72,17 +84,17 @@ Business Associate shall limit its requests, uses, and disclosures of ePHI to th
 ## 5. Term and Termination
 
 ### 5.1 Term
-The term of this BAA shall be effective as of the Effective Date and shall terminate when all of the ePHI provided by Covered Entity to Business Associate is destroyed or returned to Covered Entity.
+The term of this BAA shall be effective as of the Effective Date and shall terminate when all ePHI created, received, maintained, or transmitted on behalf of Covered Entity is destroyed or returned to Covered Entity.
 
 ### 5.2 Termination for Cause
 Upon Covered Entity’s knowledge of a material breach of this BAA by Business Associate, Covered Entity shall either:
 1. Provide thirty (30) days' written notice and opportunity for Business Associate to cure the breach; or
 2. Immediately terminate this BAA and the underlying Master Services Agreement if Business Associate fails to cure or if a cure is not feasible.
 
-### 5.3 Effect of Termination & NIST Media Sanitization
+### 5.3 Effect of Termination & Media Sanitization
 Upon termination, Business Associate shall:
-1. Return or destroy all ePHI received from Covered Entity that Business Associate still maintains in any form;
-2. Securely overwrite storage media containing ePHI in accordance with NIST SP 800-88 Rev. 1;
+1. Return or destroy all ePHI received or maintained on behalf of Covered Entity;
+2. Securely sanitize storage media containing ePHI in accordance with NIST SP 800-88 Revision 2 standards (achieved in multi-tenant cloud storage via cryptographic erasure and KMS key deprovisioning);
 3. If return or destruction is infeasible, extend the protections of this BAA to such ePHI and limit further uses and disclosures to those purposes that make the return or destruction infeasible.
 
 ---

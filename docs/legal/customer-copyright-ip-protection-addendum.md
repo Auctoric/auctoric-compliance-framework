@@ -92,9 +92,9 @@ If an Output or platform model is held to infringe, or if Auctoric reasonably be
 
 ---
 
-## 7. Relationship to Upstream Hyperscalers
+## 7. Relationship to Upstream Infrastructure Providers
 
-Auctoric orchestrates foundational compute and model runtimes across certified hyperscalers, including Google Cloud (Vertex AI), Microsoft Azure (Azure OpenAI), and Anthropic. Auctoric actively maintains enterprise indemnification agreements with these upstream providers. Where a Covered Claim arises directly from an upstream foundation model, Auctoric will manage and enforce back-to-back defense rights to protect Customer without requiring Customer to engage directly with third-party infrastructure vendors.
+Auctoric orchestrates foundational compute and model runtimes across cloud infrastructure providers, including Google Cloud (Vertex AI), Microsoft Azure (Azure OpenAI), and Anthropic. Auctoric will pursue applicable upstream defense or reimbursement rights where available under the governing provider agreement. Such availability does not expand the scope of this Addendum. Auctoric’s expressly assumed obligations remain subject to this Addendum and the applicable liability limit and are not represented as fully reimbursable by any upstream provider.
 
 ---
 

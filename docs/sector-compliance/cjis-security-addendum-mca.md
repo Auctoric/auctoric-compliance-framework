@@ -1,64 +1,57 @@
-# CJIS Security Addendum & Management Control Agreement (MCA)
+# CJIS Security Addendum & Contractor Compliance Agreement
 
 **Document Reference:** AUC-SEC-CJIS-001  
-**Version:** 2.1  
+**Version:** 3.0  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Legal / Law Enforcement Sector Compliance  
-**Regulatory Standards:** FBI Criminal Justice Information Services (CJIS) Security Policy (v5.9 / v5.10) | 28 CFR Part 20 | CJIS Security Addendum (Form CJIS-001c)
+**Regulatory Baselines:** FBI Criminal Justice Information Services (CJIS) Security Policy Version 6.1 (June 25, 2026) | Title 28 CFR Part 20 | FBI CJIS Security Addendum (Standard Form CJIS-001c)
 
 ---
 
-## Part I: CJIS Management Control Agreement (MCA)
-
-This Management Control Agreement ("**MCA**") is entered into by and between the Contracting Law Enforcement / Criminal Justice Agency ("**CJA**") and **[Auctoric, Inc.]** ("**Contractor**" or "**Auctoric**").
-
-### 1. Purpose and Authority
-Pursuant to Title 28, Code of Federal Regulations (CFR), Part 20, and the FBI CJIS Security Policy, a Criminal Justice Agency may contract with a private contractor to administer, process, store, or support systems containing Criminal Justice Information ("**CJI**").
-
-This Agreement establishes that the CJA maintains full management control over the criminal justice aspects of Auctoric platform operations housing or processing CJA data.
-
-### 2. Grant of Management Control
-Auctoric agrees that the CJA retains the ultimate authority to:
-1. Set policies regarding the access, dissemination, and handling of CJI;
-2. Approve or revoke access permissions for any Auctoric personnel or automated agent systems interacting with CJI;
-3. Direct the immediate termination of services or severance of network interconnections in the event of an unmitigated security violation;
-4. Initiate and conduct audits of Auctoric facilities, cloud configurations, and audit logs.
+> [!IMPORTANT]
+> **Workload Activation Notice:** Processing or storing Criminal Justice Information (CJI) on the Auctoric platform is strictly subject to prior agency execution of this Addendum, completion of State CJIS Systems Agency (CSA) fingerprint-based background vetting, and formal activation of an approved sovereign cloud boundary (e.g., Google Cloud Assured Workloads for CJIS). Workloads involving CJI are not permitted on commercial multi-tenant endpoints.
 
 ---
 
-## Part II: CJIS Security Addendum (Uniform Contract Clause)
+## 1. Scope, Purpose, and Governing Standards
 
-The following provisions incorporate the mandatory text and requirements of the **FBI CJIS Security Addendum (Standard Form CJIS-001c)**:
+This CJIS Security Addendum & Contractor Compliance Agreement ("**Agreement**") is entered into by and between the Contracting Law Enforcement Agency or Criminal Justice Agency ("**CJA**") and **[Auctoric, Inc.]** ("**Contractor**" or "**Auctoric**").
 
-### 1. Contractor Personnel Background Screening & Training
-* **Fingerprint-Based Background Check:** Prior to being granted unescorted logical or physical access to systems containing unencrypted CJI, all Auctoric personnel must undergo a state and national fingerprint-based background check through the appropriate State CJIS Systems Agency (CSA).
-* **Felony Disqualification:** Any individual with a felony conviction is strictly barred from access to CJI.
-* **Security Awareness Training:** Auctoric personnel with administrative access to CJIS-designated infrastructure must complete biennial Level 4 CJIS Security Awareness Training within thirty (30) days of assignment.
+This Agreement incorporates the mandatory provisions of the **FBI CJIS Security Addendum (Standard Form CJIS-001c)** and establishes the technical and administrative safeguards required under **FBI CJIS Security Policy Version 6.1** for private contractors administering, processing, or supporting systems conveying Criminal Justice Information ("**CJI**").
 
-### 2. Physical & Logical Protection of CJI
-* **U.S. Sovereign Data Boundary:** All CJI processed or stored within Auctoric systems resides exclusively within FedRAMP High / CJIS-attested hyperscaler data centers physically located within the contiguous United States (CONUS) (e.g., AWS GovCloud / Azure Government).
+---
+
+## 2. Incorporating the Uniform FBI CJIS Security Addendum (Form CJIS-001c)
+
+### 2.1 Contractor Personnel Background Screening & Training
+* **Fingerprint-Based Record Check:** Prior to being granted unescorted logical or physical access to infrastructure handling unencrypted CJI, all Auctoric personnel must undergo a state and national fingerprint-based background check through the appropriate State CSA.
+* **Felony Disqualification:** Any individual with a felony conviction is strictly barred from access to systems conveying CJI.
+* **Security Awareness Training:** Auctoric personnel with administrative access to CJIS-designated infrastructure must complete biennial CJIS Security Awareness Training within thirty (30) days of assignment.
+
+### 2.2 Sovereign Data Boundary & Physical/Logical Protection
+* **Dedicated Cloud Enclaves:** All CJI processed or stored within Auctoric systems resides exclusively within dedicated government sovereign cloud boundaries (e.g., Google Cloud Assured Workloads for CJIS).
 * **Logical Segregation:** Virtual machines, container namespaces, and vector databases containing CJI are logically and cryptographically partitioned from commercial multi-tenant infrastructure.
-* **U.S. Persons Restriction:** Unencrypted CJI may only be accessed by vetted "U.S. Persons" (as defined under 8 U.S.C. § 1101(a)(20) and 8 U.S.C. § 1324b(a)(3)) who have satisfied the background screening requirements.
+* **Personnel Geographic Restrictions:** Access to unencrypted CJI is restricted to screened personnel in accordance with CJIS Security Policy v6.1 Area 5.10 (Advisory Policy Board country standards, including the United States and Canada).
 
-### 3. Encryption Standards (CJIS Area 5.10)
-* **Data in Transit:** All network traffic conveying CJI across public or shared networks is encrypted using FIPS 140-3 validated cryptographic modules with a minimum of TLS 1.3 or IPsec (AES-256).
-* **Data at Rest:** All disk volumes, database records, and vector embeddings containing CJI are encrypted at rest using FIPS 140-3 validated AES-256 encryption.
+### 2.3 Cryptographic Standards (CJIS Area 5.10)
+* **Data in Transit:** All network traffic conveying CJI across public or shared networks is encrypted using cryptographic modules conforming to FIPS standards with a minimum of TLS 1.3 or IPsec (AES-256).
+* **Data at Rest:** All disk volumes, database records, and vector embeddings containing CJI are encrypted at rest using AES-256 with customer-controlled or dedicated KMS keys.
 
-### 4. CJI Handling in Artificial Intelligence & Large Language Models
-* **Prohibition on Model Training:** CJI shall **NEVER** be ingested into public or multi-tenant foundational AI models for training, calibration, or evaluation.
-* **Ephemeral Inference:** Prompt inputs and model completions containing CJI are processed in volatile memory and purged immediately post-inference, unless the CJA specifies encrypted retention in an authorized CJIS-compliant evidence repository.
-* **Audit Trail (CJIS Area 5.4):** Every prompt, inference transaction, automated agent tool call, and administrative access event touching CJI is recorded with immutable timestamps, user IDs, IP addresses, and event classifications, retained for a minimum of one (1) year.
+### 2.4 Handling CJI in Artificial Intelligence & Large Language Models
+* **Absolute Prohibition on Public Model Training:** CJI shall **NEVER** be ingested into public, shared, or multi-tenant foundational AI models for training, calibration, or evaluation.
+* **Ephemeral Processing:** Prompt inputs and model completions containing CJI are processed in volatile memory enclaves and purged immediately post-inference, unless the CJA explicitly configures encrypted retention in an authorized CJIS-compliant repository.
+* **Immutable Audit Trail (CJIS Area 5.4):** Every transaction, inference call, automated agent tool execution, and administrative access event touching CJI is recorded with tamper-resistant audit logs retained for a minimum of one (1) year.
 
-### 5. Security Incident Reporting & Audit Rights
-* **Incident Escalation:** Auctoric will notify the CJA Information Security Officer (ISO) and the FBI/State CSA within **four (4) hours** of confirming any unauthorized access, breach, or compromise involving CJI.
-* **Audit Co-operation:** Auctoric agrees to permit triennial CJIS audits conducted by the State CSA and the FBI CJIS Audit Unit (CAU).
+### 2.5 Security Incident Discovery and Reporting
+* **Escalation Protocol:** Auctoric will notify the CJA Information Security Officer (ISO) and the designated State CSA contact within **four (4) hours** of discovering an unauthorized access event, data breach, or security incident involving CJI.
+* **Audit Co-operation:** Auctoric agrees to permit triennial CJIS compliance audits conducted by the State CSA and the FBI CJIS Audit Unit (CAU).
 
 ---
 
-## Part III: Execution & Signatures
+## 3. Execution & Agency Signatures
 
-IN WITNESS WHEREOF, the parties hereto have executed this CJIS Management Control Agreement and Security Addendum.
+IN WITNESS WHEREOF, the parties hereto have executed this CJIS Security Addendum.
 
 | **For Criminal Justice Agency (CJA)** | **For [Auctoric, Inc.] (Contractor)** |
 | :--- | :--- |
@@ -68,8 +61,11 @@ IN WITNESS WHEREOF, the parties hereto have executed this CJIS Management Contro
 | **Title:** `[Chief of Police / Sheriff / Director]` | **Title:** `[CISO / General Counsel]` |
 | **Date:** `[Insert Date]` | **Date:** `[Insert Date]` |
 
-### Contractor Employee Acknowledgment (Individual Sign-Off Template)
-*I hereby certify that I have reviewed the FBI CJIS Security Policy and understand my legal obligation to preserve the confidentiality and integrity of all Criminal Justice Information.*
+---
+
+## 4. Contractor Employee Acknowledgment (Standard Form CJIS-001c Attachment)
+
+*I hereby certify that I have reviewed the FBI CJIS Security Policy and understand my legal obligation to preserve the confidentiality, integrity, and security of all Criminal Justice Information.*
 
 * **Employee Name:** `[Employee Legal Name]`
 * **Title / Role:** `[DevOps / Infrastructure Engineer]`

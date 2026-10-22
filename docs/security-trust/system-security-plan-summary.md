@@ -1,11 +1,11 @@
 # System Security Plan (SSP) Summary
 
 **Document Reference:** AUC-SEC-SSP-001  
-**Version:** 3.1  
+**Version:** 3.2  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
 **Classification:** Proprietary / Customer & Auditor Access Only  
-**Baseline Frameworks:** NIST SP 800-53 Rev. 5 (Moderate Baseline) | FedRAMP Moderate Equivalent | CMMC 2.0 Level 2 | SOC 2 Type II
+**Baseline Frameworks:** NIST SP 800-53 Rev. 5 (Moderate Baseline Control Alignment) | FedRAMP Moderate Equivalent Criteria | SOC 2 Type II Alignment
 
 ---
 
@@ -14,11 +14,11 @@
 * **System Name:** Auctoric Governed AI Platform
 * **System Acronym:** AUC-GAIP
 * **System Unique Identifier (UID):** `[AUC-SYS-0428]`
-* **System Categorization (FIPS 199 / FIPS 200):**
+* **System Categorization (FIPS 199 / FIPS 200 Baseline):**
   * **Confidentiality:** Moderate
   * **Integrity:** Moderate
   * **Availability:** Moderate
-  * **Overall Security Impact Level:** **MODERATE**
+  * **Overall Target Security Impact Level:** **MODERATE**
 * **System Owner:** Chief Technology Officer (`[cto@auctoric.ai]`)
 * **Information System Security Officer (ISSO):** Director of Security Operations (`[security-ops@auctoric.ai]`)
 * **Authorizing Official (AO):** Chief Information Security Officer (`[ciso@auctoric.ai]`)
@@ -39,30 +39,32 @@ AUC-GAIP facilitates:
 
 ## 3. System Boundary & Architecture Overview
 
+The production architecture is deployed on **Google Cloud Platform (GCP)** leveraging hardened Google Kubernetes Engine (GKE) clusters, Cloud KMS, and Cloud Armor:
+
 ```mermaid
 flowchart TD
     subgraph Internet["Public Internet"]
         Client["Customer Applications / API Consumers"]
     end
 
-    subgraph FedRAMP_Boundary["AUC-GAIP System Authorization Boundary (AWS GovCloud / Commercial US East/West)"]
-        Edge["Edge Protection: Cloudflare WAF, L3-L7 DDoS, TLS 1.3 Termination"]
+    subgraph GCP_Boundary["AUC-GAIP System Boundary (Google Cloud Platform US-Central / US-East)"]
+        Edge["Edge Protection: Google Cloud Armor WAF, L3-L7 DDoS, TLS 1.3 Termination"]
         
         subgraph IngressSubnet["Public DMZ Subnet"]
-            ALB["Network Load Balancer / Ingress Controller (mTLS)"]
+            ALB["Cloud Load Balancing / Ingress Controller (mTLS)"]
         end
 
         subgraph AppSubnet["Private Application Subnet (No Public IP)"]
-            K8s["Kubernetes (EKS Hardened Worker Nodes)"]
+            K8s["Google Kubernetes Engine (GKE Hardened Shielded Nodes)"]
             Inference["Inference Serving Engine (Triton / vLLM / Enclaves)"]
             Guardrail["Auctoric Guardrail & Safety Filter Service"]
             AgentHub["Autonomous Agent Orchestration Gateway"]
         end
 
-        subgraph DataSubnet["Isolated Data Subnet (Strict VPC Peering)"]
-            VectorStore["Encrypted Tenant Vector Database (Milvus / Pinecone)"]
+        subgraph DataSubnet["Isolated Data Subnet (Strict VPC Service Controls)"]
+            VectorStore["Encrypted Tenant Vector Database"]
             AuditDB["Write-Once Read-Many (WORM) Audit & Telemetry Log Store"]
-            Secrets["AWS KMS / HashiCorp Vault (FIPS 140-3 HSM)"]
+            Secrets["Google Cloud KMS / HashiCorp Vault (FIPS-Standard Cryptography)"]
         end
     end
 
@@ -78,7 +80,7 @@ flowchart TD
 ```
 
 ### 3.1 Network Isolation and Boundary Protections
-* The system authorization boundary includes all virtual instances, serverless containers, managed database clusters, and persistent object stores deployed across dedicated virtual private clouds.
+* The system authorization boundary includes all virtual instances, GKE container nodes, managed database clusters, and persistent object stores deployed across dedicated virtual private clouds (VPCs) with VPC Service Controls.
 * Zero external direct SSH or administrative ingress is permitted; internal maintenance is mediated via hardened bastion hosts requiring FIDO2 WebAuthn authentication.
 * External connections communicate exclusively over TLS 1.3 with forward secrecy.
 
@@ -86,7 +88,7 @@ flowchart TD
 
 ## 4. Key NIST SP 800-53 Control Family Summaries
 
-AUC-GAIP enforces controls mapped directly to the NIST SP 800-53 Rev. 5 Moderate baseline:
+AUC-GAIP controls are designed and implemented to align with the NIST SP 800-53 Rev. 5 Moderate baseline:
 
 ### 4.1 Access Control (AC) & Identification and Authentication (IA)
 * **AC-2 / IA-2 (Multi-Factor Authentication):** Enforced across all internal administrative consoles and platform dashboards. Phishing-resistant FIDO2 hardware tokens are required for all production access.
@@ -95,38 +97,38 @@ AUC-GAIP enforces controls mapped directly to the NIST SP 800-53 Rev. 5 Moderate
 
 ### 4.2 Audit and Accountability (AU)
 * **AU-2 / AU-6 (Audit Logging & Review):** Complete capture of administrative logins, API token invocations, prompt safety alerts, and configuration adjustments.
-* **AU-9 (Protection of Audit Information):** Logs are streamed in real-time to Amazon S3 buckets configured with Object Lock (Compliance Mode WORM), preventing deletion or alteration for 365 days.
+* **AU-9 (Protection of Audit Information):** Operational logs are streamed in real-time to Google Cloud Storage buckets configured with Bucket Lock (Retention Policy in Compliance Mode), preventing deletion or alteration for 365 days.
 
 ### 4.3 Configuration Management (CM)
 * **CM-2 / CM-3 (Baseline & Change Control):** Infrastructure as Code (Terraform) maintained in Git with dual-peer review requirements.
-* **CM-8 (Information System Component Inventory):** Automated continuous discovery of all cloud resources via AWS Config and Wiz.io.
+* **CM-8 (Information System Component Inventory):** Automated continuous discovery of all cloud resources via Google Cloud Asset Inventory.
 
 ### 4.4 Contingency Planning (CP) & Incident Response (IR)
-* **CP-9 / CP-10 (Backups & Recovery Testing):** Automated daily snapshots with cross-region replication. Tested quarterly.
-* **IR-4 / IR-6 (Incident Handling & Reporting):** Dedicated incident response team adhering to NIST SP 800-61 Rev. 2. Severe security breaches escalated to affected customers within 48 hours.
+* **CP-9 / CP-10 (Backups & Recovery Testing):** Automated daily snapshots with cross-region replication. Tested regularly.
+* **IR-4 / IR-6 (Incident Handling & Reporting):** Dedicated incident response team adhering to NIST SP 800-61 Revision 3 standards. Security breaches impacting personal data are reported to affected customers within 48 hours.
 
 ### 4.5 System and Communications Protection (SC)
-* **SC-8 / SC-13 (Transmission & Storage Cryptography):** FIPS 140-3 validated cryptographic modules. AES-256 for all stored data; TLS 1.3 for communications.
-* **SC-7 (Boundary Protection):** Stateful network firewalls, microsegmentation security groups, and automated egress traffic filtering.
+* **SC-8 / SC-13 (Transmission & Storage Cryptography):** Cryptographic modules conforming to FIPS standards. AES-256 for all stored data; TLS 1.3 for communications.
+* **SC-7 (Boundary Protection):** Cloud Armor, stateful network firewalls, microsegmentation security groups, and automated egress traffic filtering.
 
 ### 4.6 System and Information Integrity (SI)
-* **SI-2 / SI-4 (Flaw Remediation & Monitoring):** Daily automated container image vulnerability scanning, weekly kernel patching, and 24/7 SIEM monitoring with automated intrusion prevention.
+* **SI-2 / SI-4 (Flaw Remediation & Monitoring):** Automated container image vulnerability scanning, weekly kernel patching, and continuous SIEM monitoring with automated intrusion prevention.
 
 ---
 
 ## 5. Continuous Monitoring (ConMon) Strategy
 
-Auctoric operates an active Continuous Monitoring program designed to satisfy FedRAMP and SOC 2 continuous compliance expectations:
-1. **Automated Vulnerability Scanning:** Weekly Tenable/Aqua scans across container registries and cloud VMs.
-2. **Configuration Drift Detection:** Hourly automated scans against CIS Benchmarks (Level 2).
-3. **Third-Party Penetration Testing:** Annual white-box testing conducted by CREST-accredited offensive security firms.
-4. **Plan of Action and Milestones (POA&M):** All identified findings are logged in an internal tracking system with mandatory remediation timelines matching Section 7 of the Information Security Policy.
+Auctoric operates an internal Continuous Monitoring program designed to verify ongoing alignment with Moderate baseline criteria:
+1. **Automated Vulnerability Scanning:** Automated scans across container registries and cloud instances.
+2. **Configuration Drift Detection:** Continuous automated checks against CIS Benchmarks (Level 2).
+3. **Independent Penetration Testing:** Annual white-box testing conducted by external offensive security firms.
+4. **Plan of Action and Milestones (POA&M):** All identified findings are logged in an internal tracking system with mandatory remediation timelines.
 
 ---
 
-## 6. Authorizing Official Attestation
+## 6. Document Purpose & Administrative Alignment
 
-This System Security Plan Summary accurately reflects the current architectural, administrative, and technical safeguards implemented across the Auctoric Governed AI Platform.
+This System Security Plan Summary describes the architectural, administrative, and technical safeguards designed and implemented across the Auctoric Governed AI Platform. This document provides an operational security description and does not constitute an agency authorization to operate (ATO) or external government certification.
 
 * **Authorizing Official:** `[CISO Name, CISSP / CISM]`  
 * **Title:** Chief Information Security Officer  

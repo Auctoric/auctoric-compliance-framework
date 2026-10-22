@@ -68,3 +68,4 @@ temp/
 evidence-raw/
 audit-exports/
 confidential/
+*.zip
