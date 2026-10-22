@@ -11,7 +11,7 @@
 
 ## 1. Objective and Executive Commitment
 
-This Information Security Policy ("**ISP**") defines the organizational framework, operational mandates, and technical controls established by **[Auctoric, Inc.]** ("**Auctoric**") to preserve the **Confidentiality, Integrity, and Availability (CIA Triad)** of Auctoric information assets, customer data, and AI platform infrastructure.
+This Information Security Policy ("**ISP**") defines the organizational framework, operational mandates, and technical controls established by **Auctoric, LLC** ("**Auctoric**") to preserve the **Confidentiality, Integrity, and Availability (CIA Triad)** of Auctoric information assets, customer data, and AI platform infrastructure.
 
 Auctoric leadership is committed to maintaining an Information Security Management System (ISMS) engineered and managed to comply with **ISO/IEC 27001:2022** and **SOC 2 Type II (Trust Services Criteria)** standards.
 

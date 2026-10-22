@@ -11,7 +11,7 @@
 
 ## 1. Purpose and Overview
 
-This Automated Decision-Making Notice ("**ADM Notice**") provides clear, transparent information regarding how **[Auctoric, Inc.]** ("**Auctoric**") utilizes, facilitates, and governs Automated Decision-Making (ADM), profiling, and autonomous agent workflows.
+This Automated Decision-Making Notice ("**ADM Notice**") provides clear, transparent information regarding how **Auctoric, LLC** ("**Auctoric**") utilizes, facilitates, and governs Automated Decision-Making (ADM), profiling, and autonomous agent workflows.
 
 Under global data protection laws (including the EU/UK General Data Protection Regulation and California Consumer Privacy Act/CPRA), individuals have specific rights regarding decisions made solely by automated processing that produce legal or similarly significant effects. This document explains the underlying logic, operational boundaries, and rights of affected individuals.
 
@@ -110,4 +110,4 @@ If your application or interaction was with an enterprise customer utilizing Auc
 For inquiries regarding this ADM Notice or our algorithmic governance practices:
 * **Chief AI Governance Officer:** `[caigo@auctoric.ai]`
 * **Data Protection Officer:** `[dpo@auctoric.ai]`
-* **Mailing Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
+* **Mailing Address:** `[Auctoric, LLC, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

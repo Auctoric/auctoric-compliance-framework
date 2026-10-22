@@ -11,7 +11,7 @@
 
 ## 1. Introduction & Scope
 
-**[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our") provides an enterprise-grade Governed AI-as-a-System platform. We are committed to upholding data protection, transparency, and individual privacy rights.
+**Auctoric, LLC** ("**Auctoric**", "we", "us", or "our") provides an enterprise-grade Governed AI-as-a-System platform. We are committed to upholding data protection, transparency, and individual privacy rights.
 
 This Global Privacy Policy ("**Policy**") explains how we collect, use, disclose, and protect personal data across our websites, cloud platform, developer consoles, APIs, and client-facing AI governance solutions. It applies to:
 * Visitors to our websites (`[https://auctoric.ai]`);
@@ -109,6 +109,6 @@ For inquiries, concerns, or formal privacy requests, please contact our Data Pro
 
 * **Data Protection Officer:** `[Name of DPO / Privacy Officer]`
 * **Email:** `[dpo@auctoric.ai]` or `[privacy@auctoric.ai]`
-* **Physical Address:** `[Auctoric, Inc., Attn: Privacy Office, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
+* **Physical Address:** `[Auctoric, LLC, Attn: Privacy Office, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
 * **EU Representative (GDPR Art. 27):** `[Auctoric EU Compliance Ltd, Dublin, Ireland - eu-rep@auctoric.ai]`
 * **UK Representative (UK GDPR):** `[Auctoric UK Ltd, London, United Kingdom - uk-rep@auctoric.ai]`

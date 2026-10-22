@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary & Evaluation Scope
 
-**[Auctoric, Inc.]** ("**Auctoric**") is committed to digital accessibility for all users, including individuals with disabilities. This document provides an **Internal Interim Conformance Assessment** evaluating the Auctoric web console and documentation interfaces against WCAG 2.2 Level AA and Revised Section 508 standards.
+**Auctoric, LLC** ("**Auctoric**") is committed to digital accessibility for all users, including individuals with disabilities. This document provides an **Internal Interim Conformance Assessment** evaluating the Auctoric web console and documentation interfaces against WCAG 2.2 Level AA and Revised Section 508 standards.
 
 * **Product Name:** Auctoric Governed AI Console & Documentation Portal
 * **Product Version:** v2.4+
@@ -99,4 +99,4 @@ The Auctoric platform has been tested internally and confirmed compatible with:
 Auctoric welcomes inquiries regarding accessibility and is committed to swift remediation of identified barriers:
 * **Accessibility Coordinator:** `[accessibility@auctoric.ai]`
 * **Compliance Inquiries:** `[compliance@auctoric.ai]`
-* **Mailing Address:** `[Auctoric, Inc., Attn: Accessibility Team, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
+* **Mailing Address:** `[Auctoric, LLC, Attn: Accessibility Team, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

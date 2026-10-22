@@ -11,7 +11,7 @@
 
 ## 1. Overview and Rationale
 
-In modern cloud-native and AI-driven platforms, supply chain transparency is a core security prerequisite. **[Auctoric, Inc.]** ("**Auctoric**") enforces supply chain visibility across both classical software dependencies and artificial intelligence models through:
+In modern cloud-native and AI-driven platforms, supply chain transparency is a core security prerequisite. **Auctoric, LLC** ("**Auctoric**") enforces supply chain visibility across both classical software dependencies and artificial intelligence models through:
 
 1. **Software Bill of Materials (SBOM):** Machine-readable inventory of software components, third-party libraries, container layers, and licenses.
 2. **Model Bill of Materials (MBOM):** Structured inventory of machine learning models, weights, training dataset provenance, tokenizers, fine-tuning checkpoints, and evaluation benchmarks.
@@ -53,7 +53,7 @@ flowchart LR
 
 ### 3.2 Required Metadata Fields
 Every generated SBOM must include:
-* **Author / Supplier:** `[Auctoric, Inc.]`
+* **Author / Supplier:** `Auctoric, LLC`
 * **Component Name & Version:** Specific semantic release (e.g., `auctoric-agent-runtime:v2.4.1`)
 * **Package URL (PURL):** Canonical identifier (e.g., `pkg:golang/github.com/gin-gonic/gin@v1.9.1`)
 * **Cryptographic Hashes:** SHA-256 for all binaries and dependency files

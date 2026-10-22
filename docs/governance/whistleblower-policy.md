@@ -11,7 +11,7 @@
 
 ## 1. Purpose and Philosophy
 
-**[Auctoric, Inc.]** ("**Auctoric**") is committed to upholding the highest standards of legal compliance, ethical conduct, financial integrity, and algorithmic safety. We recognize that employees, contractors, and partners are frequently the first to identify systemic risks, fraud, safety bypasses, or unlawful behavior.
+**Auctoric, LLC** ("**Auctoric**") is committed to upholding the highest standards of legal compliance, ethical conduct, financial integrity, and algorithmic safety. We recognize that employees, contractors, and partners are frequently the first to identify systemic risks, fraud, safety bypasses, or unlawful behavior.
 
 This Whistleblower & Non-Retaliation Policy ("**Policy**") establishes safe, confidential, and anonymous mechanisms for reporting concerns without fear of adverse employment consequences, retaliation, or professional detriment.
 
@@ -42,7 +42,7 @@ Operated 24 hours a day, 365 days a year by an independent ethics reporting prov
 ### 3.2 Direct Internal Escalation
 * **Head of Compliance & Legal Counsel:** `[legal-compliance@auctoric.ai]`
 * **Chair of the Audit Committee (Board of Directors):** `[audit-committee-chair@auctoric.ai]`
-* **Mailing Address:** `[Auctoric, Inc., Attn: Audit Committee Chair, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]` (Marked: *"CONFIDENTIAL & PRIVILEGED - TO BE OPENED ONLY BY AUDIT COMMITTEE"*)
+* **Mailing Address:** `[Auctoric, LLC, Attn: Audit Committee Chair, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]` (Marked: *"CONFIDENTIAL & PRIVILEGED - TO BE OPENED ONLY BY AUDIT COMMITTEE"*)
 
 ---
 

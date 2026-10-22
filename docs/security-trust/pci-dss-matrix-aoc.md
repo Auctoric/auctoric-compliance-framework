@@ -11,7 +11,7 @@
 
 ## 1. Executive Summary & Cardholder Data Scoping
 
-**[Auctoric, Inc.]** ("**Auctoric**") maintains administrative and technical security measures to prevent the unauthorized processing, transmission, or exposure of Cardholder Data (CHD) and Sensitive Authentication Data (SAD).
+**Auctoric, LLC** ("**Auctoric**") maintains administrative and technical security measures to prevent the unauthorized processing, transmission, or exposure of Cardholder Data (CHD) and Sensitive Authentication Data (SAD).
 
 ### 1.1 Auctoric Direct Subscription Billing Scope (Merchant SAQ-A)
 For commercial subscription invoicing and platform billing:
@@ -69,7 +69,7 @@ flowchart LR
 
 ## 4. Compliance Assessment Summary
 
-* **Assessed Entity:** `[Auctoric, Inc.]`
+* **Assessed Entity:** `Auctoric, LLC`
 * **Assessment Framework:** PCI-DSS Version 4.0.1
 * **Scope Evaluated:** Merchant SAQ-A Self-Assessment (Direct Subscription Billing)
 * **Assessment Mode:** Internal Self-Assessment aligned with SAQ-A requirements

@@ -11,7 +11,7 @@
 
 ## 1. Executive Message & Commitment
 
-At **[Auctoric, Inc.]** ("**Auctoric**"), our reputation for integrity, technical excellence, and ethical leadership is our most valuable asset. As pioneers in Governed Artificial Intelligence, we operate at the frontier of technology where technical capability must be matched by profound ethical accountability.
+At **Auctoric, LLC** ("**Auctoric**"), our reputation for integrity, technical excellence, and ethical leadership is our most valuable asset. As pioneers in Governed Artificial Intelligence, we operate at the frontier of technology where technical capability must be matched by profound ethical accountability.
 
 This Code of Ethics and Business Conduct ("**Code**") outlines the fundamental ethical principles, legal standards, and professional conduct expected from every employee, officer, director, contractor, and representative acting on behalf of Auctoric globally.
 

@@ -9,7 +9,7 @@
 
 ---
 
-This Data Processing Addendum ("**DPA**") supplements and amends the [Master Services Agreement](master-services-agreement.md) ("**Principal Agreement**") entered into by and between **[Auctoric, Inc.]** ("**Auctoric**", "Processor") and the customer entity identified in the applicable Order Form ("**Customer**", "Controller" or "Processor" on behalf of third parties).
+This Data Processing Addendum ("**DPA**") supplements and amends the [Master Services Agreement](master-services-agreement.md) ("**Principal Agreement**") entered into by and between **Auctoric, LLC** ("**Auctoric**", "Processor") and the customer entity identified in the applicable Order Form ("**Customer**", "Controller" or "Processor" on behalf of third parties).
 
 ---
 
@@ -160,7 +160,7 @@ To the extent Auctoric processes Personal Information subject to the CCPA/CPRA a
 
 **IN WITNESS WHEREOF**, the parties have executed this Data Processing Addendum.
 
-| **For [Auctoric, Inc.]** | **For [Customer Legal Name]** |
+| **For Auctoric, LLC** | **For [Customer Legal Name]** |
 | :--- | :--- |
 | **Signature:** ___________________________ | **Signature:** ___________________________ |
 | **Name:** `[Authorized Officer Name]` | **Name:** `[Authorized Officer Name]` |

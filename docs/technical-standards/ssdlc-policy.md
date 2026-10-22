@@ -11,7 +11,7 @@
 
 ## 1. Purpose and Philosophy
 
-The Secure Software Development Lifecycle ("**SSDLC**") Policy establishes mandatory engineering practices, automated security gates, and governance controls implemented by **[Auctoric, Inc.]** ("**Auctoric**").
+The Secure Software Development Lifecycle ("**SSDLC**") Policy establishes mandatory engineering practices, automated security gates, and governance controls implemented by **Auctoric, LLC** ("**Auctoric**").
 
 Security is an integrated, continuous engineering discipline—not an afterthought. Auctoric embraces **"Shift-Left Security"** and **"Continuous AI Safety Verification"**, ensuring that all code, container images, foundation model orchestrations, and autonomous agent capabilities are hardened throughout conception, development, testing, and production runtime.
 

@@ -6,15 +6,15 @@
 **Last Updated:** October 22, 2026  
 **Classification:** Public / Legal  
 **Architectural Framework:** Modular Self-Service Structure + Upstream Flow-Down Provisions  
-**Incorporated Schedules:** [Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md) | [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md) | [Acceptable Use Policy (AUP)](acceptable-use-policy.md)
+**Incorporated Schedules:** [Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md) | [Acceptable Use Policy (AUP)](acceptable-use-policy.md)
 
 ---
 
-Welcome to **Auctoric**! These Terms of Service ("**Terms**") govern your access to and use of the website, APIs, software development kits (SDKs), documentation, developer console, and Governed AI-as-a-System platform services (collectively, the "**Services**") provided by **[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our").
+Welcome to **Auctoric**! These Terms of Service ("**Terms**") govern your access to and use of the website, APIs, software development kits (SDKs), documentation, developer console, and Governed AI-as-a-System platform services (collectively, the "**Services**") provided by **Auctoric, LLC** ("**Auctoric**", "we", "us", or "our", a Florida limited liability company).
 
 By creating an account, calling our APIs, embedding our SDKs, or otherwise accessing the Services, you ("**User**" or "**You**") agree to be bound by these Terms and the incorporated [Schedule 1: AI Service-Specific Terms](ai-service-specific-terms.md). If you are using the Services on behalf of an organization, you represent that you have authority to bind that entity, and "you" refers to that organization.
 
-**Enterprise Account Carve-Out:** Where an executed Master Services Agreement governs Customer’s use of the Services, that Master Services Agreement shall supersede and govern over these self-service Terms of Service.
+**Enterprise Account Carve-Out:** Where an executed Master Services Agreement (MSA) governs Customer’s use of the Services, that Master Services Agreement (including the enterprise [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md)) shall supersede and govern over these self-service Terms of Service.
 
 ---
 
@@ -65,8 +65,8 @@ You must strictly comply with our [Acceptable Use Policy](acceptable-use-policy.
 * **Outputs:** As between you and Auctoric, Auctoric assigns to you all right, title, and interest in and to the Outputs generated specifically for you from your Inputs.
 * **Zero Model Training on Customer Data:** Auctoric does **not** use Customer Inputs or Outputs to train, fine-tune, or calibrate public foundational models or any third-party models. See our [AI DPA & Model Non-Retention Addendum](../ai-governance/ai-dpa-model-non-retention-addendum.md).
 
-### 5.2 Customer Copyright Commitment (Output Defense)
-Paid commercial subscribers are eligible for defense against third-party copyright claims on Covered Outputs under the terms and conditions of the [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md), provided built-in safety filters remained active.
+### 5.2 Enterprise Intellectual Property Defense Carve-Out
+The [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md) is an enterprise schedule that applies exclusively to customers with an executed Master Services Agreement (MSA) and Enterprise Order Form. Self-service subscriptions governed by these Terms do not include third-party legal defense or indemnification for AI Outputs, and all claims under these Terms remain strictly subject to the limitation of liability in Section 7.3.
 
 ---
 
@@ -93,9 +93,9 @@ IN NO EVENT SHALL AUCTORIC BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUE
 
 ---
 
-## 8. Dispute Resolution & Binding Arbitration
+## 8. Governing Law, Dispute Resolution & Binding Arbitration
 
-Any dispute, controversy, or claim arising out of or relating to these Terms will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. You waive any right to participate in class actions or class-wide arbitration.
+These Terms will be governed by and construed under the laws of the State of Florida, without regard to conflict of law principles. Any dispute, controversy, or claim arising out of or relating to these Terms will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The place of arbitration shall be Martin County, Florida, or conducted virtually upon mutual agreement. You irrevocably waive any right to participate in class actions, representative proceedings, or class-wide arbitration.
 
 ---
 
@@ -103,4 +103,4 @@ Any dispute, controversy, or claim arising out of or relating to these Terms wil
 
 * **Legal Department:** `[legal@auctoric.ai]`
 * **Privacy Office:** `[privacy@auctoric.ai]`
-* **Mailing Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
+* **Mailing Address:** `[Auctoric, LLC, Attn: Legal Department, Martin County, Florida]`

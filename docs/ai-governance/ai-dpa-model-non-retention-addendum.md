@@ -9,7 +9,7 @@
 
 ---
 
-This AI Data Processing & Model Non-Retention Addendum ("**AI Addendum**") supplements the Master Services Agreement and Data Processing Addendum entered into between **[Auctoric, Inc.]** ("**Auctoric**") and the contracting customer entity ("**Customer**").
+This AI Data Processing & Model Non-Retention Addendum ("**AI Addendum**") supplements the Master Services Agreement and Data Processing Addendum entered into between **Auctoric, LLC** ("**Auctoric**") and the contracting customer entity ("**Customer**").
 
 This AI Addendum establishes legally binding safeguards and technical guarantees regarding the isolation, processing, non-retention, and intellectual property ownership of Customer Content within the Auctoric AI Platform.
 
@@ -108,7 +108,7 @@ In addition to the breach notifications specified in the DPA, Auctoric will noti
 
 **IN WITNESS WHEREOF**, the parties have executed this AI Data Processing & Model Non-Retention Addendum.
 
-| **For [Auctoric, Inc.]** | **For [Customer Legal Name]** |
+| **For Auctoric, LLC** | **For [Customer Legal Name]** |
 | :--- | :--- |
 | **Signature:** ___________________________ | **Signature:** ___________________________ |
 | **Name:** `[Authorized Officer Name]` | **Name:** `[Authorized Officer Name]` |

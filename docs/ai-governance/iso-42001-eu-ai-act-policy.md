@@ -11,7 +11,7 @@
 
 ## 1. Purpose and Executive Summary
 
-**[Auctoric, Inc.]** ("**Auctoric**") is committed to engineering, deploying, and governing trustworthy, robust, and ethical Artificial Intelligence systems. This Policy establishes Auctoric’s **Artificial Intelligence Management System (AIMS)** framework aligned with **ISO/IEC 42001:2023** control criteria and operationalizes compliance obligations under the **European Union Artificial Intelligence Act (EU AI Act, Regulation (EU) 2024/1689)**.
+**Auctoric, LLC** ("**Auctoric**") is committed to engineering, deploying, and governing trustworthy, robust, and ethical Artificial Intelligence systems. This Policy establishes Auctoric’s **Artificial Intelligence Management System (AIMS)** framework aligned with **ISO/IEC 42001:2023** control criteria and operationalizes compliance obligations under the **European Union Artificial Intelligence Act (EU AI Act, Regulation (EU) 2024/1689)**.
 
 As a provider of enterprise Governed AI infrastructure, Auctoric establishes verifiable controls spanning model risk classification, human oversight, transparency, data provenance, robustness, and post-market monitoring across the AI system lifecycle.
 
@@ -130,4 +130,4 @@ Auctoric will notify relevant market surveillance authorities and affected deplo
 
 * **Chief AI Governance Officer:** `[caigo@auctoric.ai]`
 * **AI Ethics & Safety Office:** `[ai-ethics@auctoric.ai]`
-* **Official Postal Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
+* **Official Postal Address:** `[Auctoric, LLC, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

@@ -16,7 +16,7 @@
 
 ## 1. Scope, Purpose, and Governing Standards
 
-This CJIS Security Addendum & Contractor Compliance Agreement ("**Agreement**") is entered into by and between the Contracting Law Enforcement Agency or Criminal Justice Agency ("**CJA**") and **[Auctoric, Inc.]** ("**Contractor**" or "**Auctoric**").
+This CJIS Security Addendum & Contractor Compliance Agreement ("**Agreement**") is entered into by and between the Contracting Law Enforcement Agency or Criminal Justice Agency ("**CJA**") and **Auctoric, LLC** ("**Contractor**" or "**Auctoric**").
 
 This Agreement incorporates the mandatory provisions of the **FBI CJIS Security Addendum (Standard Form CJIS-001c)** and establishes the technical and administrative safeguards required under **FBI CJIS Security Policy Version 6.1** for private contractors administering, processing, or supporting systems conveying Criminal Justice Information ("**CJI**").
 
@@ -53,9 +53,9 @@ This Agreement incorporates the mandatory provisions of the **FBI CJIS Security 
 
 IN WITNESS WHEREOF, the parties hereto have executed this CJIS Security Addendum.
 
-| **For Criminal Justice Agency (CJA)** | **For [Auctoric, Inc.] (Contractor)** |
+| **For Criminal Justice Agency (CJA)** | **For Auctoric, LLC (Contractor)** |
 | :--- | :--- |
-| **Agency Name:** `[Name of Law Enforcement Agency]` | **Company Name:** `[Auctoric, Inc.]` |
+| **Agency Name:** `[Name of Law Enforcement Agency]` | **Company Name:** `Auctoric, LLC` |
 | **Signature:** ___________________________ | **Signature:** ___________________________ |
 | **Name:** `[Authorized Agency Official]` | **Name:** `[Authorized Officer Name]` |
 | **Title:** `[Chief of Police / Sheriff / Director]` | **Title:** `[CISO / General Counsel]` |

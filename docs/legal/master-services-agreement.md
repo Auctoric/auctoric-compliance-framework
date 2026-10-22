@@ -10,7 +10,7 @@
 
 ---
 
-THIS MASTER SERVICES AGREEMENT ("**AGREEMENT**") GOVERNS CUSTOMER’S ACQUISITION AND USE OF THE SERVICES PROVIDED BY **[AUCTORIC, INC.]** ("**AUCTORIC**", "WE", "US", OR "OUR"). 
+THIS MASTER SERVICES AGREEMENT ("**AGREEMENT**") GOVERNS CUSTOMER’S ACQUISITION AND USE OF THE SERVICES PROVIDED BY **AUCTORIC, LLC** ("**AUCTORIC**", "WE", "US", OR "OUR", A FLORIDA LIMITED LIABILITY COMPANY). 
 
 BY EXECUTING AN ORDER FORM THAT REFERENCES THIS AGREEMENT, OR BY ACCESSING OR USING THE AUCTORIC GOVERNED AI PLATFORM, THE ENTITY IDENTIFIED IN THE ORDER FORM ("**CUSTOMER**") AGREES TO BE BOUND BY THIS AGREEMENT.
 
@@ -142,12 +142,18 @@ NEITHER PARTY NOR ITS AFFILIATES WILL BE LIABLE TO THE OTHER FOR ANY INDIRECT, S
 ### 9.2 Aggregate Liability Cap
 EXCEPT FOR EXCLUDED LIABILITIES (SECTION 9.3), EACH PARTY’S MAXIMUM AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT WILL BE LIMITED TO THE TOTAL AMOUNT PAID OR PAYABLE BY CUSTOMER UNDER THE APPLICABLE ORDER FORM IN THE TWELVE (12) MONTHS PRECEDING THE INCIDENT GIVING RISE TO LIABILITY.
 
-### 9.3 Excluded Liabilities
-The limitations in Section 9.1 and Section 9.2 do not apply to:
-1. Either party's gross negligence or willful misconduct;
-2. Customer's breach of Section 3.3 (Upstream Flow-Downs / Anti-Distillation / Prohibitions);
-3. Indemnification obligations under Section 8.1, 8.2, and 8.3;
-4. Customer's payment obligations under Section 5.
+### 9.3 Excluded Liabilities & Super-Caps
+1. **Uncapped Liabilities:** The limitations in Section 9.1 (Waiver of Consequential Damages) and Section 9.2 (Aggregate Liability Cap) do not apply to:
+   a. Either party's gross negligence, willful misconduct, or fraud;
+   b. Customer's willful or intentional breach of intellectual property restrictions under Section 3.3 (including intentional model extraction, parameter distillation to train competing foundation models, or unauthorized decompilation);
+   c. Customer's indemnification obligations under Section 8.3;
+   d. Auctoric's platform software IP indemnification obligations under Section 8.1;
+   e. Customer's payment obligations under Section 5;
+   f. Any liability that cannot be limited or excluded under applicable law.
+2. **Super-Cap Liabilities (2× ACV):** Notwithstanding Section 9.2, each party’s maximum aggregate liability arising out of or related to:
+   a. Third-party Copyright claims for AI Outputs under Section 8.2 and the [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md); and
+   b. Breaches of data protection and privacy obligations under the [Data Processing Addendum (DPA)](data-processing-addendum.md),
+   shall be subject to a separate aggregate limit equal to two times (2×) the total amount paid or payable by Customer under the applicable Order Form in the twelve (12) months preceding the incident giving rise to liability ("Super-Cap"). The waiver of consequential damages in Section 9.1 will not exclude amounts expressly payable to an unaffiliated third party under a covered indemnity, but the Super-Cap remains the definitive aggregate monetary ceiling for all such claims combined.
 
 ---
 
@@ -181,7 +187,7 @@ The Services and technical data are subject to U.S. Export Administration Regula
 ## 13. General Provisions
 
 ### 13.1 Governing Law and Jurisdiction
-This Agreement will be governed by the laws of the State of `[Delaware / California]`, without regard to conflict of laws principles. The parties consent to exclusive jurisdiction in the state or federal courts located in `[San Francisco, California / Wilmington, Delaware]`.
+This Agreement will be governed by and construed in accordance with the laws of the State of Florida, without giving effect to any choice of law or conflict of laws principles. The parties irrevocably consent and submit to the exclusive personal jurisdiction and venue of the state courts located in Martin County, Florida, or the United States District Court for the Southern District of Florida (Fort Pierce Division) for any litigation arising out of or related to this Agreement.
 
 ### 13.2 Entire Agreement and Severability
 This Agreement, together with all Order Forms, Schedules (including Schedule 1: AI Service-Specific Terms), and Addenda, constitutes the entire agreement between the parties. If any provision is held invalid, the remaining provisions remain in full force.
@@ -193,9 +199,9 @@ Neither party may assign this Agreement without prior written consent, except in
 
 **IN WITNESS WHEREOF**, the parties have caused this Master Services Agreement to be executed by their duly authorized representatives.
 
-| **For [Auctoric, Inc.]** | **For [Customer Legal Name]** |
+| **For Auctoric, LLC** | **For [Customer Legal Name]** |
 | :--- | :--- |
 | **Signature:** ___________________________ | **Signature:** ___________________________ |
 | **Name:** `[Authorized Officer Name]` | **Name:** `[Authorized Officer Name]` |
-| **Title:** `[VP / Executive Title]` | **Title:** `[VP / Executive Title]` |
+| **Title:** `[Manager / Executive Officer]` | **Title:** `[VP / Executive Title]` |
 | **Date:** `[Insert Date]` | **Date:** `[Insert Date]` |

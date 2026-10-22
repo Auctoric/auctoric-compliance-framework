@@ -9,7 +9,7 @@
 
 ---
 
-This Business Associate Agreement ("**BAA**") is entered into by and between **[Auctoric, Inc.]** ("**Business Associate**" or "**Auctoric**") and the customer entity identified in the underlying Master Services Agreement ("**Covered Entity**" or "**Customer**", or Customer acting as a Business Associate on behalf of third-party covered entities).
+This Business Associate Agreement ("**BAA**") is entered into by and between **Auctoric, LLC** ("**Business Associate**" or "**Auctoric**") and the customer entity identified in the underlying Master Services Agreement ("**Covered Entity**" or "**Customer**", or Customer acting as a Business Associate on behalf of third-party covered entities).
 
 WHEREAS, Covered Entity is subject to the requirements of HIPAA and HITECH, and wishes to utilize the Auctoric Governed AI Platform to process, store, or transmit electronic Protected Health Information ("**ePHI**");
 
@@ -111,7 +111,7 @@ In the event of a conflict between the terms of this BAA and the Master Services
 
 **IN WITNESS WHEREOF**, the parties have caused this Business Associate Agreement to be executed by their duly authorized representatives.
 
-| **For [Auctoric, Inc.]** | **For [Covered Entity Legal Name]** |
+| **For Auctoric, LLC** | **For [Covered Entity Legal Name]** |
 | :--- | :--- |
 | **Signature:** ___________________________ | **Signature:** ___________________________ |
 | **Name:** `[Authorized Officer Name]` | **Name:** `[Authorized Officer Name]` |

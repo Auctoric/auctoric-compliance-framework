@@ -11,7 +11,7 @@
 
 ## 1. Executive Commitment
 
-At **[Auctoric, Inc.]** ("**Auctoric**"), our mission is to build intelligent, autonomous, and governed AI systems that augment human capability, safeguard fundamental human rights, and operate with verifiable integrity.
+At **Auctoric, LLC** ("**Auctoric**"), our mission is to build intelligent, autonomous, and governed AI systems that augment human capability, safeguard fundamental human rights, and operate with verifiable integrity.
 
 We recognize that Artificial Intelligence brings unprecedented transformative potential alongside genuine socio-technical risks—including algorithmic bias, deepfake proliferation, informational manipulation, privacy erosion, and opaque decision-making. This Responsible AI & Ethics Statement defines the foundational ethical tenets and operational standards that guide every algorithm we train, every API we deploy, and every enterprise partnership we forge.
 
