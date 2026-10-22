@@ -1,94 +1,102 @@
 # Acceptable Use Policy (AUP)
 
 **Document Reference:** AUC-LEG-AUP-001  
-**Version:** 2.5  
+**Version:** 3.0  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
-**Classification:** Public / Legal
+**Classification:** Public / Legal & Safety  
+**Harmonized Upstream Policies:** Google Cloud Generative AI Prohibited Use Policy | Microsoft Azure OpenAI Code of Conduct | Anthropic Usage Policy | EU AI Act (Reg (EU) 2024/1689, Art. 5)
 
 ---
 
 ## 1. Overview and Purpose
 
-This Acceptable Use Policy ("**AUP**") defines the mandatory rules and boundaries governing the use of the **Auctoric** platform, APIs, developer SDKs, autonomous agent frameworks, and hosted AI inference endpoints (collectively, the "**Services**").
+This Acceptable Use Policy ("**AUP**") defines the mandatory boundaries, safety restrictions, and prohibited practices governing the use of the **Auctoric Governed AI Platform**, APIs, developer SDKs, autonomous agent frameworks, and inference endpoints (collectively, the "**Services**").
 
-Auctoric provides enterprise-grade Governed AI infrastructure designed to empower organizations while strictly mitigating technological risks, algorithmic harm, and regulatory violations. Every user, developer, and organization accessing the Services must comply with this AUP.
+Because Auctoric orchestrates workloads on top of leading hyperscalers (including **Google Cloud Platform / Vertex AI**, **Microsoft Azure**, and **Anthropic**), **this AUP directly incorporates and harmonizes with the most restrictive policies in our technology stack**. Any activity prohibited by our upstream providers is strictly prohibited on Auctoric. Every customer, developer, and user accessing the Services must comply with this AUP.
 
 ---
 
-## 2. Prohibited AI and Platform Uses
+## 2. Harmonized Prohibited AI Practices
 
 You agree not to use the Services, or allow any third party to use the Services, for any of the following prohibited activities:
 
-### 2.1 EU AI Act Prohibited AI Practices (Regulation (EU) 2024/1689, Article 5)
-1. **Subliminal & Deceptive Techniques:** Deploying cognitive behavioral manipulation techniques beyond human consciousness to materially distort an individual’s behavior in a manner that causes physical or psychological harm.
-2. **Exploitation of Vulnerabilities:** Exploiting vulnerabilities of individuals due to age, disability, or specific social or economic situation to distort their behavior.
-3. **Biometric Categorization & Social Scoring:** Evaluating or classifying natural persons based on social behavior or personality traits leading to discriminatory treatment; or deducing race, political opinions, trade union membership, religious beliefs, or sexual orientation via biometric categorization.
-4. **Real-Time Remote Biometric Identification:** Deploying real-time remote biometric identification in publicly accessible spaces for law enforcement purposes, except as strictly permitted under Article 5(1)(h) of the EU AI Act.
-5. **Emotion Recognition in Workplaces and Educational Institutions:** Utilizing inference algorithms to infer emotional states in employment or academic environments, unless deployed strictly for medical or safety reasons.
+### 2.1 Healthcare & Clinical Decision-Making (Google Cloud Alignment)
+1. **Automated Medical Diagnosis:** Providing automated, unsupervised clinical diagnostic assessments, medical triage, or patient care instructions;
+2. **Prescription & Treatment Planning:** Generating, modifying, or authorizing pharmaceutical prescriptions or medical treatment plans without qualified, licensed human healthcare provider oversight;
+3. **Medical Device Functionality:** Operating the platform as an uncertified Software-as-a-Medical-Device (SaMD) subject to FDA, EMA, or EU MDR 2017/745 regulatory approval.
 
-### 2.2 Cyberattacks, Exploitation, and Malicious Software
-1. Generating, optimizing, or deploying computer viruses, rootkits, polymorphic malware, spyware, or ransomware payloads;
-2. Automating unauthorized reconnaissance, vulnerability exploitation, credential stuffing, or distributed denial-of-service (DDoS) operations;
-3. Conducting adversarial jailbreak testing, prompt extraction, or safety boundary bypasses against Auctoric infrastructure without prior written authorization from `[security@auctoric.ai]`;
-4. Attempting to reverse-engineer model weights, gradient histories, or foundational architectures.
+### 2.2 Critical Infrastructure & Kinetic Systems (Google & Anthropic Alignment)
+1. **Critical Infrastructure Control:** Deploying autonomous agentic workflows to directly monitor, operate, or control nuclear energy facilities, electric power grids, water treatment plants, or public utility distribution networks;
+2. **Transportation & Life-Safety:** Operating real-time air traffic control systems, autonomous vehicular navigation, emergency 911 dispatch routing, or life-support medical equipment;
+3. **Autonomous Physical Action:** Interfacing agentic tool-execution endpoints with physical actuators, robotics, or industrial machinery without air-gapped deterministic emergency stop overrides.
 
-### 2.3 Weapons, CBRN, and Physical Harm
-1. Designing, manufacturing, enhancing, or weaponizing Chemical, Biological, Radiological, or Nuclear (CBRN) materials or delivery systems;
-2. Generating actionable blueprints or instructions for kinetic weaponry, improvised explosive devices (IEDs), or critical infrastructure sabotage;
-3. Facilitating, inciting, or coordinating acts of self-harm, suicide, or physical violence against individuals or groups.
+### 2.3 Weapons, CBRN, and Physical Violence
+1. **CBRN Materials:** Designing, synthesizing, weaponizing, or optimizing Chemical, Biological, Radiological, or Nuclear (CBRN) agents, pathogens, or delivery mechanisms;
+2. **Kinetic Weaponry:** Generating actionable manufacturing schematics or operational instructions for firearms, 3D-printed ghost guns, explosives, or improvised military devices;
+3. **Violence & Self-Harm:** Facilitating, inciting, or encouraging acts of suicide, self-harm, terrorism, or physical violence against individuals or groups.
 
-### 2.4 Fraud, Deception, and Impersonation
-1. Operating deceptive automated social bots or deepfake pipelines intended to disrupt democratic elections or civic processes;
-2. Creating non-consensual deepfake pornography, synthetic non-consensual sexual content, or child sexual abuse material (CSAM);
-3. Impersonating actual human individuals or legal entities without prominent disclosure, in violation of transparency obligations;
-4. Orchestrating financial pyramid schemes, phishing campaigns, identity theft, or synthetic credit fraud.
+### 2.4 EU AI Act Prohibited Practices (Regulation (EU) 2024/1689, Article 5)
+1. **Subliminal Cognitive Manipulation:** Deploying subliminal or purposefully manipulative techniques to materially distort an individual’s behavior, impairing informed decision-making in a manner causing physical or psychological harm;
+2. **Exploitation of Vulnerabilities:** Exploiting vulnerabilities related to age, physical or mental disability, or socioeconomic circumstance to distort behavior;
+3. **Social Scoring:** Evaluating or classifying natural persons based on social behavior or personality traits leading to discriminatory or unjustified detrimental treatment;
+4. **Biometric Categorization of Sensitive Traits:** Deducing race, political opinions, trade union membership, religious beliefs, or sexual orientation via biometric categorization;
+5. **Workplace Emotion Inference:** Using emotion recognition algorithms in workplace or educational environments (unless deployed strictly for validated medical or physical safety reasons).
 
-### 2.5 Regulated Professional Advice & High-Stakes Decisions
-1. Providing autonomous, unsupervised diagnostic medical decisions, prescription modifications, or emergency triage;
-2. Generating formal legal opinions, court pleadings, or fiduciary financial determinations without qualified professional human oversight;
-3. Using autonomous agentic executions for critical infrastructure control (e.g., nuclear grid, air traffic control) without fail-safe deterministic human overrides.
+### 2.5 Cyberattacks, Exploitation, and Model Distillation
+1. **Malicious Payloads:** Generating polymorphic malware, ransomware, exploit scripts, or automated vulnerability scanning tools for unauthorized target exploitation;
+2. **Adversarial Jailbreaking & Attacks:** Conducting prompt injection attacks, model inversion, or safety classifier bypasses against Auctoric or upstream hyperscaler infrastructure;
+3. **Anti-Model Distillation:** Using inference outputs to train, fine-tune, bootstrap, or calibrate any machine learning or foundation model that competes with Auctoric, Google Cloud, Microsoft Azure, or Anthropic;
+4. **Credential Harvesting & Phishing:** Orchestrating automated spear-phishing, credential stuffing, or social engineering campaigns.
 
----
-
-## 3. High-Risk Use System Requirements
-
-If you utilize Auctoric to support High-Risk AI Systems as classified under the EU AI Act (Annex III) or critical systems under NIST AI RMF:
-
-1. **Human-in-the-Loop (HITL):** You must maintain meaningful human oversight mechanisms capable of reviewing, rejecting, or overriding platform outputs.
-2. **Post-Market Monitoring:** You must log system interactions and report any algorithmic anomalies or systemic bias incidents to `[compliance@auctoric.ai]`.
-3. **Mandatory Documentation:** You must maintain technical documentation demonstrating compliance with risk management benchmarks as outlined in our [ISO 42001 & EU AI Act Policy](../ai-governance/iso-42001-eu-ai-act-policy.md).
+### 2.6 Fraud, Deception, and High-Risk Profiling
+1. **Electoral & Civic Deception:** Operating automated bots or generating synthetic deepfake media intended to suppress voter turnout, deceive voters, or undermine democratic electoral processes;
+2. **Synthetic Media Impersonation:** Creating synthetic depictions of real human beings without prominent, clear watermarking and disclosure of its artificial origin;
+3. **Child Exploitation (CSAM):** Generating, distributing, or facilitating Child Sexual Abuse Material (CSAM) or Child Sexual Exploitation and Abuse (CSAE)—violations will be reported immediately to NCMEC and federal law enforcement;
+4. **Unsupervised Statutory ADM:** Making fully automated decisions producing legal effects (e.g., credit denial, mortgage qualification, tenancy screening, employment termination) without meaningful human oversight and explainability.
 
 ---
 
-## 4. Platform Safety Guardrails & Monitoring
+## 3. High-Risk Deployer Obligations
 
-To maintain compliance and platform safety:
-* Auctoric operates automated, privacy-preserving safety classifiers designed to detect toxic payloads, prompt injection, and CBRN vectors in real-time.
-* Classifiers operate at the network perimeter without persisting personal data into training pipelines.
-* Any bypass of these runtime filters constitutes a material breach of this Policy.
+If Customer utilizes Auctoric to power High-Risk AI Systems as classified under Annex III of the EU AI Act or critical systems under NIST AI RMF:
+* **Human-in-the-Loop (HITL):** Customer must maintain meaningful human review mechanisms capable of rejecting, overriding, or modifying platform-generated recommendations.
+* **Incident Escalation:** Customer must notify Auctoric at `[compliance@auctoric.ai]` within forty-eight (48) hours of becoming aware of any systemic algorithmic failure, discrimination incident, or regulatory inquiry.
+* **Auditability:** Customer must maintain complete prompt context logs and human sign-off records as required by [Schedule 1: AI Service-Specific Terms](ai-service-specific-terms.md).
 
 ---
 
-## 5. Violations, Enforcement, and Appeals
+## 4. Platform Safety Guardrails & Runtime Classifiers
 
-### 5.1 Enforcement Actions
-Auctoric reserves the right to investigate potential violations. Depending on the severity and frequency, Auctoric may:
-* Issue formal warnings and compliance remediation notices;
-* Impose temporary rate limit throttles or revoke specific API key permissions;
-* Suspend or permanently terminate account access;
-* Report severe violations (such as CSAM, terrorism, or critical infrastructure threats) to law enforcement or relevant competent authorities.
+To maintain compliance with Google Cloud and our multi-cloud hyperscaler stack:
+* Auctoric deploys multi-stage, privacy-preserving runtime classifiers analyzing prompts and completions in volatile memory.
+* Filters automatically tokenize PII/PCI strings, intercept prompt injection vectors, and block prohibited CBRN, cyberweapon, and toxic content.
+* Circumventing, tampering with, or attempting to evade these runtime filters is a material violation of this Policy.
 
-### 5.2 Appeals Process
-If you believe your account suspension or prompt filtering resulted from an erroneous classification or false positive:
-1. Submit an appeal to `[appeals@auctoric.ai]` within fourteen (14) days of notice;
-2. Include account ID, transaction hash or timestamp, and technical justification;
-3. The Auctoric AI Safety & Compliance Committee will review the appeal and deliver a written determination within five (5) business days.
+---
+
+## 5. Violations, Enforcement, and Upstream Reporting
+
+### 5.1 Enforcement Hierarchy
+Upon discovering or receiving a credible report of an AUP violation, Auctoric may:
+1. Issue formal compliance remediation warnings;
+2. Impose real-time rate throttles or restrict specific model routes;
+3. Immediately suspend API keys or terminate the customer account;
+4. Report severe violations (including CSAM, terrorist content, or critical infrastructure threats) to law enforcement and national market surveillance authorities.
+
+### 5.2 Upstream Hyperscaler Escalation
+If a violation involves an upstream provider’s model endpoint (e.g., Google Vertex AI or Azure OpenAI), Auctoric will cooperate with upstream Trust & Safety investigators and comply with mandatory reporting obligations under our enterprise hyperscaler agreements.
+
+### 5.3 Appeals Process
+If you believe a request was blocked or an account suspended due to an erroneous classification or false positive:
+* Submit an appeal to `[appeals@auctoric.ai]` within fourteen (14) days;
+* Include account ID, transaction hash/timestamp, and technical justification;
+* The Auctoric AI Safety & Compliance Committee will review and respond within five (5) business days.
 
 ---
 
 ## 6. Reporting Violations
 
-If you discover or suspect a violation of this Policy, please report it immediately:
 * **Email:** `[safety@auctoric.ai]` or `[trust@auctoric.ai]`
 * **Online Incident Form:** `[https://auctoric.ai/safety/report-violation]`
+* **RFC 9116 Vulnerability Disclosures:** Refer to [security.txt](../../.well-known/security.txt)

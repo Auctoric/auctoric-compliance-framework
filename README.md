@@ -3,6 +3,7 @@
 [![Compliance Status](https://img.shields.io/badge/Compliance-Production--Ready-emerald.svg)](#master-compliance-matrix)
 [![Security Standards](https://img.shields.io/badge/Security-ISO%2027001%20%7C%20SOC%202%20Type%20II%20%7C%20FedRAMP%20Mod-blue.svg)](docs/security-trust/information-security-policy.md)
 [![AI Governance](https://img.shields.io/badge/AI%20Governance-ISO%2042001%20%7C%20EU%20AI%20Act%20%7C%20NIST%20AI%20RMF-purple.svg)](docs/ai-governance/iso-42001-eu-ai-act-policy.md)
+[![IP Protection](https://img.shields.io/badge/IP%20Protection-Customer%20Copyright%20Commitment-orange.svg)](docs/legal/customer-copyright-ip-protection-addendum.md)
 [![RFC 9116](https://img.shields.io/badge/RFC%209116-security.txt-success.svg)](.well-known/security.txt)
 
 ---
@@ -13,7 +14,7 @@
 
 While foundational models provide cognitive capabilities, enterprises cannot deploy unconstrained, non-deterministic machine learning systems without deterministic safety boundaries, cryptographic auditability, data sovereignty guarantees, and multi-jurisdictional regulatory alignment.
 
-The **Auctoric Platform** bridges this trust gap by wrapping foundation models, retrieval-augmented generation (RAG) pipelines, and autonomous agent swarms in an immutable governance envelope:
+Auctoric bridges this trust gap by wrapping multi-cloud foundation models (Google Cloud Vertex AI, Microsoft Azure OpenAI, Anthropic), retrieval-augmented generation (RAG) pipelines, and autonomous agent swarms in an immutable governance envelope:
 
 ```mermaid
 flowchart TB
@@ -30,38 +31,45 @@ flowchart TB
             PII["Real-Time PII & PCI Masking Engine"]
             Inj["Multi-Stage Prompt Injection Classifier"]
             Tox["Toxicity, Bias & Hallucination Guardrails"]
+            CopyrightFilter["Verbatim Text & Output Copyright Filter"]
         end
 
-        subgraph Orchestration["Agent & Inference Orchestration"]
+        subgraph Orchestration["Agent & Multi-Model Orchestration"]
             AgentEngine["Autonomous Agent Decision Engine"]
             HITL["Deterministic Human-in-the-Loop Intercepts"]
             RAG["Cryptographically Partitioned Tenant Vector Stores"]
+            Router{"Intelligent Model Router"}
         end
 
-        subgraph TelemetryWORM["Audit & Verification Enclave"]
+        subgraph TelemetryWORM["Audit & Legal Enclave"]
             Audit["Immutable WORM Audit Trail (AU-9)"]
             Explain["Explainability Engine (SHAP / Counterfactuals)"]
+            CCCShield["Customer Copyright Commitment (CCC) Shield"]
             BOM["Automated SBOM / MBOM Attestations"]
         end
     end
 
     subgraph FoundationProviders["Stateless Inference Tier (Zero-Retention)"]
-        Model["Isolated Foundation Models (Weights Frozen, No Training)"]
+        GCP["Google Cloud Vertex AI (Gemini)"]
+        Azure["Microsoft Azure OpenAI (GPT-4o)"]
+        Anthropic["Anthropic Commercial (Claude)"]
     end
 
     App -->|TLS 1.3 + Signed JWT| mTLS
     IAM -.->|Identity Federation| mTLS
     mTLS --> RealTimeGuardrails
     RealTimeGuardrails --> Orchestration
-    Orchestration <--> FoundationProviders
+    Orchestration <--> Router
+    Router <--> FoundationProviders
     Orchestration --> TelemetryWORM
     HITL -.->|Human Sign-off| Orchestration
 ```
 
 ### Core Architecture Pillars
+* **Modular SST Framework:** Adopts Microsoft's modular architecture separating core universal terms from AI Service-Specific Terms (SST).
+* **Harmonized Flow-Down Restrictions:** Directly enforces Google Cloud Vertex AI, Azure OpenAI, and Anthropic upstream restrictions (anti-model distillation, benchmarking bans, clinical medical disclaimers).
+* **Enterprise Customer Copyright Commitment (CCC):** Comprehensive third-party intellectual property output defense modeled after Microsoft and Google enterprise commitments.
 * **Zero Model Training on Customer Data:** Legally and architecturally guaranteed isolation ensuring customer prompts, inputs, vector embeddings, and outputs are never ingested into foundation models.
-* **Deterministic Guardrails with Ephemeral Execution:** Real-time token filtering in volatile memory with immediate post-inference purging.
-* **Continuous Regulatory Attestation:** Comprehensive adherence to international AI governance, defense cybersecurity, and healthcare standards.
 
 ---
 
@@ -71,6 +79,8 @@ The following matrix maps Auctoric’s architectural, administrative, and legal 
 
 | Compliance Framework / Standard | Governing Body / Jurisdiction | Primary Regulatory Scope | Auctoric Compliance Posture | Core Governing Documentation |
 | :--- | :--- | :--- | :---: | :--- |
+| **Customer Copyright Commitment (CCC)** | Enterprise Best Practice (MSFT/Google) | Third-party output copyright defense & indemnification | **Active Commitment** | [Customer Copyright Addendum](docs/legal/customer-copyright-ip-protection-addendum.md) |
+| **Multi-Cloud Flow-Down Terms** | Google / Microsoft / Anthropic | Anti-distillation, non-reverse engineering, benchmarking | **Harmonized** | [AI Service-Specific Terms](docs/legal/ai-service-specific-terms.md), [AUP](docs/legal/acceptable-use-policy.md) |
 | **ISO/IEC 42001:2023** | ISO / IEC (Global) | Artificial Intelligence Management System (AIMS) | **Certified / Fully Aligned** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md) |
 | **EU AI Act (Reg (EU) 2024/1689)** | European Parliament / EU AI Office | Risk-based AI regulation, High-Risk AI conformity | **Conformant** | [ISO 42001 & EU AI Act Policy](docs/ai-governance/iso-42001-eu-ai-act-policy.md), [ADM Notice](docs/ai-governance/automated-decision-making-notice.md) |
 | **NIST AI RMF 1.0** | NIST / U.S. Dept. of Commerce | AI Risk Management Framework (Govern, Map, Measure, Manage) | **Fully Aligned** | [Responsible AI & Ethics Statement](docs/ai-governance/responsible-ai-ethics-statement.md) |
@@ -94,48 +104,52 @@ This repository contains modular, audit-ready compliance policies, contractual a
 
 ```
 auctoric-compliance-framework/
-├── .gitignore                                   # Standard repository exclusions
+├── .gitignore                                         # Standard repository exclusions
 ├── .well-known/
-│   └── security.txt                             # RFC 9116 vulnerability contact metadata
-├── README.md                                    # Master framework index & executive overview
+│   └── security.txt                                   # RFC 9116 vulnerability contact metadata
+├── README.md                                          # Master framework index & executive overview
 └── docs/
-    ├── legal/                                   # Commercial, customer & privacy contracts
-    │   ├── master-services-agreement.md         # Master enterprise subscription terms
-    │   ├── terms-of-service.md                  # Web console & developer terms of service
-    │   ├── global-privacy-policy.md             # Comprehensive GDPR/CCPA privacy notice
-    │   ├── acceptable-use-policy.md             # Platform guardrails & safety restrictions
-    │   └── data-processing-addendum.md          # Art. 28 GDPR DPA with EU/UK SCCs
-    ├── ai-governance/                           # AI-specific safety, ethics & statutory policies
-    │   ├── iso-42001-eu-ai-act-policy.md        # Comprehensive AIMS & EU AI Act governance
-    │   ├── ai-dpa-model-non-retention-addendum.md# Model non-retention & customer IP covenant
-    │   ├── responsible-ai-ethics-statement.md   # Core principles & ethical red-lines
-    │   └── automated-decision-making-notice.md  # ADM logic, explainability & consumer rights
-    ├── security-trust/                          # Enterprise cybersecurity & trust frameworks
-    │   ├── information-security-policy.md       # ISO 27001 / SOC 2 Information Security Policy
-    │   ├── shared-responsibility-matrix.md      # CSP vs. Auctoric vs. Customer RACI model
-    │   ├── system-security-plan-summary.md      # FedRAMP / NIST SP 800-53 Rev 5 SSP overview
-    │   └── pci-dss-matrix-aoc.md                # PCI-DSS v4.0.1 responsibility matrix & AoC
-    ├── sector-compliance/                       # Regulated industry compliance instruments
-    │   ├── hipaa-baa.md                         # Business Associate Agreement for ePHI
-    │   └── cjis-security-addendum-mca.md        # FBI CJIS Management Control Agreement & Addendum
-    ├── technical-standards/                     # Engineering, supply chain & disclosure policies
-    │   ├── ssdlc-policy.md                      # Secure SDLC, threat modeling & CI/CD gates
-    │   ├── vulnerability-disclosure-policy.md   # Coordinated vulnerability disclosure & Safe Harbor
-    │   └── sbom-mbom-guidelines.md              # CycloneDX SBOM & Model BOM architecture
-    ├── accessibility/                           # Accessibility standards & procurement filings
-    │   └── vpat-wcag22aa-section508.md          # Voluntary Product Accessibility Template (VPAT 2.5)
-    └── governance/                              # Corporate ethics, reporting & whistleblower safeguards
-        ├── code-of-ethics.md                    # Code of Ethics and Business Conduct
-        └── whistleblower-policy.md              # Whistleblower protections & hotline procedures
+    ├── legal/                                         # Commercial, customer & privacy contracts
+    │   ├── master-services-agreement.md               # Master enterprise subscription terms (Modular MCA style)
+    │   ├── terms-of-service.md                        # Web console & developer terms of service
+    │   ├── ai-service-specific-terms.md               # Schedule 1: AI Service-Specific Terms (SST)
+    │   ├── customer-copyright-ip-protection-addendum.md# Customer Copyright Commitment (CCC) Defense
+    │   ├── global-privacy-policy.md                   # Comprehensive GDPR/CCPA privacy notice
+    │   ├── acceptable-use-policy.md                   # Harmonized AUP with Google/Anthropic flow-downs
+    │   └── data-processing-addendum.md                # Art. 28 GDPR DPA with EU/UK SCCs
+    ├── ai-governance/                                 # AI-specific safety, ethics & statutory policies
+    │   ├── iso-42001-eu-ai-act-policy.md              # Comprehensive AIMS & EU AI Act governance
+    │   ├── ai-dpa-model-non-retention-addendum.md      # Model non-retention & customer IP covenant
+    │   ├── responsible-ai-ethics-statement.md         # Core principles & ethical red-lines
+    │   └── automated-decision-making-notice.md        # ADM logic, explainability & consumer rights
+    ├── security-trust/                                # Enterprise cybersecurity & trust frameworks
+    │   ├── information-security-policy.md             # ISO 27001 / SOC 2 Information Security Policy
+    │   ├── shared-responsibility-matrix.md            # Tripartite CSP vs. Auctoric vs. Customer RACI model
+    │   ├── system-security-plan-summary.md            # FedRAMP / NIST SP 800-53 Rev 5 SSP overview
+    │   └── pci-dss-matrix-aoc.md                      # PCI-DSS v4.0.1 responsibility matrix & AoC
+    ├── sector-compliance/                             # Regulated industry compliance instruments
+    │   ├── hipaa-baa.md                               # Business Associate Agreement for ePHI
+    │   └── cjis-security-addendum-mca.md              # FBI CJIS Management Control Agreement & Addendum
+    ├── technical-standards/                           # Engineering, supply chain & disclosure policies
+    │   ├── ssdlc-policy.md                            # Secure SDLC, threat modeling & CI/CD gates
+    │   ├── vulnerability-disclosure-policy.md         # Coordinated vulnerability disclosure & Safe Harbor
+    │   └── sbom-mbom-guidelines.md                    # CycloneDX SBOM & Model BOM architecture
+    ├── accessibility/                                 # Accessibility standards & procurement filings
+    │   └── vpat-wcag22aa-section508.md                # Voluntary Product Accessibility Template (VPAT 2.5)
+    └── governance/                                    # Corporate ethics, reporting & whistleblower safeguards
+        ├── code-of-ethics.md                          # Code of Ethics and Business Conduct
+        └── whistleblower-policy.md                    # Whistleblower protections & hotline procedures
 ```
 
 ### Complete Document Index
 
 #### 📜 Legal Documents
-* [Master Services Agreement (MSA)](docs/legal/master-services-agreement.md) — Enterprise subscription terms, AI warranties, intellectual property allocations, and liability terms.
+* [Master Services Agreement (MSA)](docs/legal/master-services-agreement.md) — Enterprise subscription terms, modular SST integration, AI warranties, intellectual property allocations, and liability terms.
 * [Terms of Service (ToS)](docs/legal/terms-of-service.md) — Self-service developer and API access conditions, rate quotas, and acceptable usage rules.
+* [Schedule 1: AI Service-Specific Terms (SST)](docs/legal/ai-service-specific-terms.md) — Multi-cloud model routing, anti-distillation flow-downs, autonomous agent rules, and clinical triage disclaimers.
+* [Customer Copyright & IP Protection Addendum](docs/legal/customer-copyright-ip-protection-addendum.md) — Legally binding output defense protecting enterprise customers against third-party copyright claims.
 * [Global Privacy Policy](docs/legal/global-privacy-policy.md) — Comprehensive privacy disclosures covering GDPR, CCPA/CPRA, and international data transfers.
-* [Acceptable Use Policy (AUP)](docs/legal/acceptable-use-policy.md) — Prohibited AI use cases, EU AI Act banned practices, and abuse reporting.
+* [Acceptable Use Policy (AUP)](docs/legal/acceptable-use-policy.md) — Harmonized safety restrictions incorporating Google Cloud Generative AI and Anthropic prohibited use policies.
 * [Data Processing Addendum (DPA) with SCCs](docs/legal/data-processing-addendum.md) — Article 28 GDPR processor agreement including Standard Contractual Clauses (Modules 2 & 3).
 
 #### 🤖 AI Governance Documents

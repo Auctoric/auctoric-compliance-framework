@@ -1,118 +1,104 @@
 # Terms of Service (ToS)
 
 **Document Reference:** AUC-LEG-TOS-001  
-**Version:** 3.1  
+**Version:** 4.0  
 **Effective Date:** `[Insert Effective Date]`  
 **Last Updated:** October 22, 2026  
-**Classification:** Public / Legal
+**Classification:** Public / Legal  
+**Architectural Framework:** Microsoft Modular Self-Service Structure + Google Flow-Down Provisions  
+**Incorporated Schedules:** [Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md) | [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md) | [Acceptable Use Policy (AUP)](acceptable-use-policy.md)
 
 ---
 
-Welcome to **Auctoric**! These Terms of Service ("**Terms**") govern your access to and use of the website, APIs, software development kits (SDKs), documentation, developer console, and AI-as-a-System platform services (collectively, the "**Services**") provided by **[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our").
+Welcome to **Auctoric**! These Terms of Service ("**Terms**") govern your access to and use of the website, APIs, software development kits (SDKs), documentation, developer console, and Governed AI-as-a-System platform services (collectively, the "**Services**") provided by **[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our").
 
-By signing up, creating an account, invoking our APIs, or otherwise using the Services, you ("**User**" or "**You**") agree to be bound by these Terms. If you are using the Services on behalf of an organization, you represent that you have authority to bind that entity, and "you" refers to that organization.
-
----
-
-## 1. Eligibility & Account Registration
-
-### 1.1 Eligibility
-You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use the Services.
-
-### 1.2 Account Security
-You must provide accurate, current, and complete registration information. You are strictly responsible for safeguarding your credentials, API keys, and secret tokens. Any actions executed through your account credentials are your legal responsibility. If you suspect an unauthorized compromise, notify `[security@auctoric.ai]` immediately.
+By creating an account, calling our APIs, embedding our SDKs, or otherwise accessing the Services, you ("**User**" or "**You**") agree to be bound by these Terms and the incorporated [Schedule 1: AI Service-Specific Terms](ai-service-specific-terms.md). If you are using the Services on behalf of an organization, you represent that you have authority to bind that entity, and "you" refers to that organization.
 
 ---
 
-## 2. Permitted Use & Developer Guidelines
+## 1. Modular Structure and Service-Specific Rules
 
-### 2.1 License Grant
+These Terms govern your general account relationship, authentication, and platform use. Specialized technical features—such as multi-model LLM routing, agentic tool execution, and vector embeddings—are governed by our incorporated **[Schedule 1: AI Service-Specific Terms (SST)](ai-service-specific-terms.md)**. If there is a direct conflict between these core terms and Schedule 1, Schedule 1 shall control with respect to AI-specific operations.
+
+---
+
+## 2. Eligibility & Account Security
+
+### 2.1 Eligibility
+You must be at least 18 years of age (or the age of majority in your jurisdiction) to use the Services.
+
+### 2.2 Credential Protection
+You are strictly responsible for safeguarding your credentials, API keys, client secrets, and access tokens. Any actions, API consumption, or agent workflows executed through your credentials are your legal responsibility. If you suspect an unauthorized compromise, notify `[security@auctoric.ai]` immediately.
+
+---
+
+## 3. Developer License, Upstream Flow-Downs & Restrictions
+
+### 3.1 License Grant
 Subject to these Terms, Auctoric grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Services in accordance with our technical documentation at `[https://docs.auctoric.ai]`.
 
-### 2.2 API Rate Limits & Quotas
-Auctoric enforces rate limits, token ceilings, concurrent request caps, and storage limits based on your subscription tier. You agree not to attempt to circumvent or tamper with these rate limiting mechanisms.
+### 3.2 Google Cloud & Multi-Model Flow-Down Covenants
+Because Auctoric orchestrates workloads across foundation model providers (including Google Cloud Vertex AI, Microsoft Azure OpenAI, and Anthropic), you agree to the following flow-down covenants:
+1. **Anti-Model Distillation:** You shall not use Outputs to train, fine-tune, bootstrap, or calibrate any machine learning, foundation, or generative AI model that competes with Auctoric, Google Cloud, Microsoft Azure, or Anthropic;
+2. **Reverse Engineering:** You shall not decompile, disassemble, or extract model weights, neural architectures, or latent representations of the Services;
+3. **Benchmarking:** You shall not publicly disclose or publish competitive benchmarking or stress test evaluations without prior written approval from Auctoric;
+4. **Upstream Abuse Suspension:** If an upstream hyperscaler (e.g., Google Cloud Trust & Safety) flags your account’s traffic for safety or policy violations, Auctoric may immediately suspend your API access.
 
 ---
 
-## 3. Acceptable Use and Safety Restrictions
+## 4. Acceptable Use and High-Risk Boundaries
 
-You agree not to use the Services to:
-1. Violate any applicable local, national, or international law, statute, or regulation;
-2. Generate, propagate, or facilitate malware, ransomware, exploit payloads, or automated cyberattacks;
-3. Perform prompt injection attacks, model extraction, training extraction, or adversarial jailbreaking against the platform infrastructure;
-4. Use inference outputs to bootstrap, train, fine-tune, or distantly supervise competing foundational AI models without our express written agreement;
-5. Generate child sexual abuse material (CSAM), non-consensual sexual imagery, terrorism promotion, or content that incites imminent violence;
-6. Deploy autonomous lethal systems, prohibited surveillance systems, or biometric identification systems banned under the EU AI Act (Regulation (EU) 2024/1689);
-7. Provide unverified, autonomous medical, legal, or financial advice where regulated human licensing is required.
-
-Full policies are detailed in the [Acceptable Use Policy](acceptable-use-policy.md).
+You must strictly comply with our [Acceptable Use Policy](acceptable-use-policy.md). In particular, you shall not use the Services for:
+* **Clinical Medical Decisions:** Autonomous medical diagnosis, treatment planning, or emergency triage without licensed medical professional oversight;
+* **Critical Infrastructure:** Nuclear facilities, public utility power grids, air traffic control, or life support systems;
+* **Prohibited AI Practices:** Social scoring, biometric categorization of sensitive traits, or subliminal manipulation banned under the EU AI Act;
+* **Cyberweapons & Exploitation:** Generating malware, automated hacking tools, or executing prompt injection attacks against platform infrastructure.
 
 ---
 
-## 4. Content Rights and Intellectual Property
+## 5. Content Rights, Non-Retention & Copyright Defense
 
-### 4.1 Your Content (Inputs and Outputs)
+### 5.1 Your Content (Inputs and Outputs)
 * **Inputs:** You retain all ownership rights in the text, data, code, prompts, and media you submit to the Services.
-* **Outputs:** As between you and Auctoric, Auctoric assigns to you all right, title, and interest in and to the content generated and returned to you by the Services based on your Inputs.
-* **Non-Retention / Zero Training Commitment:** Auctoric does **not** use Customer Inputs or Outputs to train, fine-tune, or calibrate public foundational models or any third-party models. See our [AI DPA & Model Non-Retention Addendum](../ai-governance/ai-dpa-model-non-retention-addendum.md).
+* **Outputs:** As between you and Auctoric, Auctoric assigns to you all right, title, and interest in and to the Outputs generated specifically for you from your Inputs.
+* **Zero Model Training on Customer Data:** Auctoric does **not** use Customer Inputs or Outputs to train, fine-tune, or calibrate public foundational models or any third-party models. See our [AI DPA & Model Non-Retention Addendum](../ai-governance/ai-dpa-model-non-retention-addendum.md).
 
-### 4.2 Platform Ownership
-Auctoric reserves all rights, title, and interest in and to the Services, including all software, source code, model weights, safety filters, vector routing algorithms, documentation, trademarks, and logos.
+### 5.2 Customer Copyright Commitment (Output Defense)
+Paid commercial users are protected by our enterprise **Customer Copyright Commitment**, defending against third-party copyright claims on AI Outputs provided Auctoric's built-in safety filters remained active. Full terms and covenants are set forth in the [Customer Copyright & IP Protection Addendum](customer-copyright-ip-protection-addendum.md).
 
 ---
 
-## 5. Billing, Subscriptions, and Cancellation
+## 6. Billing, Metered Quotas, and Cancellation
 
-### 5.1 Paid Plans & Usage Metering
-Certain features or API consumption models require paid subscriptions or metered billing (e.g., token usage, GPU compute hours, agent runtimes). You agree to pay all applicable fees according to the billing terms presented at checkout.
+### 6.1 Usage Metering
+Certain features operate on metered billing (e.g., token usage, GPU compute hours, agent runtimes). You agree to pay all applicable fees according to the billing terms presented at checkout.
 
-### 5.2 Taxes
-Fees are exclusive of taxes, which will be charged where required by law.
-
-### 5.3 Cancellation
+### 6.2 Cancellation
 You may cancel your self-service subscription at any time via the Auctoric Console settings. Access will continue until the end of the current billing cycle, with no refunds for partial periods.
-
----
-
-## 6. Service Availability, Modifications, and Termination
-
-### 6.1 Service Availability
-While we strive for high availability (with enterprise SLA tiers up to 99.95%), the self-service tiers are provided on an "as-is" and "as-available" basis without uptime guarantees.
-
-### 6.2 Suspension and Termination
-We reserve the right to suspend or terminate your API keys or account immediately if:
-1. You materially breach these Terms or our Acceptable Use Policy;
-2. Your activity poses a security risk, threats to other tenants, or stability issues for our infrastructure;
-3. Required to do so by court order, law enforcement, or regulatory authority.
 
 ---
 
 ## 7. Disclaimers and Limitations of Liability
 
-### 7.1 AI Output Disclaimer
-YOU EXPRESSLY UNDERSTAND AND AGREE THAT ARTIFICIAL INTELLIGENCE MODELS EMPLOY STATISTICAL PATTERN PREDICTION AND CAN PRODUCE INCORRECT, FACTUALLY INACCURATE, OR UNINTENDED RESULTS (COMMONLY REFERRED TO AS "HALLUCINATIONS"). YOU MUST INDEPENDENTLY VERIFY ALL CRITICAL OUTPUTS BEFORE RELYING UPON THEM.
+### 7.1 Non-Deterministic AI Output Disclaimer
+YOU EXPRESSLY UNDERSTAND AND AGREE THAT ARTIFICIAL INTELLIGENCE MODELS EMPLOY STATISTICAL PATTERN PREDICTION AND CAN PRODUCE INCORRECT, FACTUALLY INACCURATE, OR UNINTENDED RESULTS ("HALLUCINATIONS"). YOU MUST INDEPENDENTLY VERIFY ALL CRITICAL OUTPUTS BEFORE RELYING UPON THEM.
 
 ### 7.2 Disclaimer of Warranties
-TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, OR STATUTORY.
 
 ### 7.3 Limitation of Liability
-IN NO EVENT SHALL AUCTORIC BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOSS OF PROFITS, DATA, USE, OR GOODWILL. AUCTORIC’S MAXIMUM AGGREGATE LIABILITY FOR ALL CLAIMS UNDER THESE TERMS SHALL NOT EXCEED THE GREATER OF ONE HUNDRED US DOLLARS ($100 USD) OR THE AMOUNT YOU PAID AUCTORIC IN THE THREE (3) MONTHS PRECEDING THE CLAIM.
+IN NO EVENT SHALL AUCTORIC BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES. AUCTORIC’S MAXIMUM AGGREGATE LIABILITY FOR ALL CLAIMS UNDER THESE TERMS SHALL NOT EXCEED THE GREATER OF ONE HUNDRED US DOLLARS ($100 USD) OR THE AMOUNT YOU PAID AUCTORIC IN THE THREE (3) MONTHS PRECEDING THE CLAIM.
 
 ---
 
-## 8. Dispute Resolution & Arbitration
+## 8. Dispute Resolution & Binding Arbitration
 
-### 8.1 Informal Resolution
-Before filing a formal claim, both parties agree to attempt to resolve any dispute amicably by contacting `[legal@auctoric.ai]`.
-
-### 8.2 Binding Arbitration
 Any dispute, controversy, or claim arising out of or relating to these Terms will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. You waive any right to participate in class actions or class-wide arbitration.
 
 ---
 
 ## 9. Contact Information
 
-For questions regarding these Terms:
 * **Legal Department:** `[legal@auctoric.ai]`
 * **Privacy Office:** `[privacy@auctoric.ai]`
 * **Mailing Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
