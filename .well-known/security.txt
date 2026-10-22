@@ -1,0 +1,13 @@
+# Auctoric Security Disclosure Contact Information
+# Reference: IETF RFC 9116 (https://www.rfc-editor.org/rfc/rfc9116)
+
+Contact: mailto:security@auctoric.com
+Contact: https://auctoric.com/security/report
+Expires: 2027-10-22T12:00:00.000Z
+Encryption: https://auctoric.com/security/pgp-key.asc
+Acknowledgments: https://auctoric.com/security/hall-of-fame
+Preferred-Languages: en
+Canonical: https://auctoric.com/.well-known/security.txt
+Policy: https://auctoric.com/security/disclosure-policy
+Hiring: https://auctoric.com/careers
+CSAF: https://auctoric.com/.well-known/csaf/provider-metadata.json
