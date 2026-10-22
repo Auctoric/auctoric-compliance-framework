@@ -93,6 +93,6 @@ The Auctoric platform has been tested and confirmed compatible with:
 ## 6. Feedback, Inquiries, and Remediation Requests
 
 Auctoric welcomes inquiries regarding accessibility and is committed to swift remediation of identified barriers:
-* **Accessibility Coordinator:** `[accessibility@auctoric.com]`
-* **Compliance Inquiries:** `[compliance@auctoric.com]`
+* **Accessibility Coordinator:** `[accessibility@auctoric.ai]`
+* **Compliance Inquiries:** `[compliance@auctoric.ai]`
 * **Mailing Address:** `[Auctoric, Inc., Attn: Accessibility Team, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

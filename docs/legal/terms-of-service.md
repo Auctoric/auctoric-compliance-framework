@@ -20,14 +20,14 @@ By signing up, creating an account, invoking our APIs, or otherwise using the Se
 You must be at least 18 years of age (or the age of legal majority in your jurisdiction) to use the Services.
 
 ### 1.2 Account Security
-You must provide accurate, current, and complete registration information. You are strictly responsible for safeguarding your credentials, API keys, and secret tokens. Any actions executed through your account credentials are your legal responsibility. If you suspect an unauthorized compromise, notify `[security@auctoric.com]` immediately.
+You must provide accurate, current, and complete registration information. You are strictly responsible for safeguarding your credentials, API keys, and secret tokens. Any actions executed through your account credentials are your legal responsibility. If you suspect an unauthorized compromise, notify `[security@auctoric.ai]` immediately.
 
 ---
 
 ## 2. Permitted Use & Developer Guidelines
 
 ### 2.1 License Grant
-Subject to these Terms, Auctoric grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Services in accordance with our technical documentation at `[https://docs.auctoric.com]`.
+Subject to these Terms, Auctoric grants you a limited, non-exclusive, non-transferable, revocable license to access and use the Services in accordance with our technical documentation at `[https://docs.auctoric.ai]`.
 
 ### 2.2 API Rate Limits & Quotas
 Auctoric enforces rate limits, token ceilings, concurrent request caps, and storage limits based on your subscription tier. You agree not to attempt to circumvent or tamper with these rate limiting mechanisms.
@@ -103,7 +103,7 @@ IN NO EVENT SHALL AUCTORIC BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUE
 ## 8. Dispute Resolution & Arbitration
 
 ### 8.1 Informal Resolution
-Before filing a formal claim, both parties agree to attempt to resolve any dispute amicably by contacting `[legal@auctoric.com]`.
+Before filing a formal claim, both parties agree to attempt to resolve any dispute amicably by contacting `[legal@auctoric.ai]`.
 
 ### 8.2 Binding Arbitration
 Any dispute, controversy, or claim arising out of or relating to these Terms will be settled by binding individual arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. You waive any right to participate in class actions or class-wide arbitration.
@@ -113,6 +113,6 @@ Any dispute, controversy, or claim arising out of or relating to these Terms wil
 ## 9. Contact Information
 
 For questions regarding these Terms:
-* **Legal Department:** `[legal@auctoric.com]`
-* **Privacy Office:** `[privacy@auctoric.com]`
+* **Legal Department:** `[legal@auctoric.ai]`
+* **Privacy Office:** `[privacy@auctoric.ai]`
 * **Mailing Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

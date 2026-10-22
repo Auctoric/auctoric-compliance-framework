@@ -40,8 +40,8 @@ Operated 24 hours a day, 365 days a year by an independent ethics reporting prov
 * **International Dial-In Numbers:** Available via web portal for EU/UK and worldwide locations.
 
 ### 3.2 Direct Internal Escalation
-* **Head of Compliance & Legal Counsel:** `[legal-compliance@auctoric.com]`
-* **Chair of the Audit Committee (Board of Directors):** `[audit-committee-chair@auctoric.com]`
+* **Head of Compliance & Legal Counsel:** `[legal-compliance@auctoric.ai]`
+* **Chair of the Audit Committee (Board of Directors):** `[audit-committee-chair@auctoric.ai]`
 * **Mailing Address:** `[Auctoric, Inc., Attn: Audit Committee Chair, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]` (Marked: *"CONFIDENTIAL & PRIVILEGED - TO BE OPENED ONLY BY AUDIT COMMITTEE"*)
 
 ---

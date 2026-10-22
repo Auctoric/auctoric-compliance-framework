@@ -124,6 +124,6 @@ Auctoric shall notify the relevant national market surveillance authorities and 
 
 ## 9. Inquiries & Regulatory Contact
 
-* **Chief AI Governance Officer:** `[caigo@auctoric.com]`
-* **AI Ethics & Safety Office:** `[ai-ethics@auctoric.com]`
+* **Chief AI Governance Officer:** `[caigo@auctoric.ai]`
+* **AI Ethics & Safety Office:** `[ai-ethics@auctoric.ai]`
 * **Official Postal Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

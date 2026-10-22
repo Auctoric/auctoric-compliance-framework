@@ -172,8 +172,8 @@ auctoric-compliance-framework/
 
 | Contact Office | Focus Area | Contact Channel |
 | :--- | :--- | :--- |
-| **Chief AI Governance Officer (CAIGO)** | ISO 42001, EU AI Act, Algorithmic Ethics | `[caigo@auctoric.com]` |
-| **Chief Information Security Officer (CISO)** | Security Architecture, Vulnerability Inquiries | `[ciso@auctoric.com]` |
-| **Data Protection Officer (DPO)** | GDPR, Privacy, International Data Transfers | `[dpo@auctoric.com]` |
-| **Vulnerability Disclosures** | RFC 9116 Coordinated Disclosure Intake | [security.txt](.well-known/security.txt) / `[security@auctoric.com]` |
+| **Chief AI Governance Officer (CAIGO)** | ISO 42001, EU AI Act, Algorithmic Ethics | `[caigo@auctoric.ai]` |
+| **Chief Information Security Officer (CISO)** | Security Architecture, Vulnerability Inquiries | `[ciso@auctoric.ai]` |
+| **Data Protection Officer (DPO)** | GDPR, Privacy, International Data Transfers | `[dpo@auctoric.ai]` |
+| **Vulnerability Disclosures** | RFC 9116 Coordinated Disclosure Intake | [security.txt](.well-known/security.txt) / `[security@auctoric.ai]` |
 | **Whistleblower Intake Hotline** | Anonymous 24/7 Ethics & Misconduct Reporting | `[https://auctoric.ethicspoint.com]` / `[+1 (800) 555-ETHX]` |

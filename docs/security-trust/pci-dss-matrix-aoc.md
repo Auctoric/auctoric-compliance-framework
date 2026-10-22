@@ -75,4 +75,4 @@ flowchart LR
 * **Assessment Date:** `[Insert Date]`
 * **Validation Status:** **COMPLIANT**
 
-Copies of the official signed Attestation of Compliance (AoC) are available to enterprise customers under active NDA upon request at `[compliance@auctoric.com]`.
+Copies of the official signed Attestation of Compliance (AoC) are available to enterprise customers under active NDA upon request at `[compliance@auctoric.ai]`.

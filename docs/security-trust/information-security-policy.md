@@ -139,6 +139,6 @@ Auctoric maintains resilient multi-region architectures designed to withstand ca
 
 This policy is reviewed annually by the CISO and approved by the Executive Risk Committee.
 
-* **Security Governance Office:** `[infosec@auctoric.com]`
-* **CISO Direct Contact:** `[ciso@auctoric.com]`
-* **Security Incident Hotline:** `[+1 (800) 555-AUCT / security-incident@auctoric.com]`
+* **Security Governance Office:** `[infosec@auctoric.ai]`
+* **CISO Direct Contact:** `[ciso@auctoric.ai]`
+* **Security Incident Hotline:** `[+1 (800) 555-AUCT / security-incident@auctoric.ai]`

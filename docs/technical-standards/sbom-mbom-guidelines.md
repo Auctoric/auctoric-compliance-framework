@@ -125,7 +125,7 @@ Artificial intelligence models introduce unique supply chain risks, such as back
 3. **In-Toto Attestations:** Build provenance attestations (SLSA Level 3) stored directly in the OCI registry alongside container artifacts.
 4. **Customer Verification:** Enterprise customers can verify release integrity using the public Cosign verification key:
    ```bash
-   cosign verify --key https://auctoric.com/security/cosign.pub registry.auctoric.com/platform/engine:v2.4
+   cosign verify --key https://auctoric.ai/security/cosign.pub registry.auctoric.ai/platform/engine:v2.4
    ```
 
 ---
@@ -134,5 +134,5 @@ Artificial intelligence models introduce unique supply chain risks, such as back
 
 Enterprise customers and federal procurement auditors may access current SBOM and MBOM inventories:
 * **Via API:** `GET /api/v1/compliance/bom?artifact_id={ID}`
-* **Via Portal:** Downloadable through the Auctoric Trust Portal (`[https://trust.auctoric.com/bom]`)
-* **Security Inquiries:** `[supply-chain-security@auctoric.com]`
+* **Via Portal:** Downloadable through the Auctoric Trust Portal (`[https://trust.auctoric.ai/bom]`)
+* **Security Inquiries:** `[supply-chain-security@auctoric.ai]`

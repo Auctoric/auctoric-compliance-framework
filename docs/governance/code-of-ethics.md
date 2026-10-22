@@ -82,7 +82,7 @@ Personnel who possess Material Non-Public Information (MNPI) regarding Auctoric 
 ### 7.1 Seeking Guidance & Reporting Violations
 If you witness, suspect, or are asked to participate in any activity that violates this Code or applicable law:
 1. Speak with your direct manager or People Business Partner;
-2. Contact the Legal & Compliance Office at `[compliance@auctoric.com]`;
+2. Contact the Legal & Compliance Office at `[compliance@auctoric.ai]`;
 3. Submit a confidential or anonymous report via our Whistleblower Hotline at `[https://auctoric.ethicspoint.com]` or `[+1 (800) 555-ETHX]`.
 
 ### 7.2 Non-Retaliation Commitment

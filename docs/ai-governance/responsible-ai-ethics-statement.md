@@ -96,6 +96,6 @@ Auctoric draws an unequivocal line against technologies that violate fundamental
 ## 5. Stakeholder Engagement and Reporting
 
 We welcome external scrutiny and feedback from civil society, academic researchers, and affected communities:
-* **Ethics Concerns:** `[ethics@auctoric.com]`
-* **Algorithmic Bias Reports:** `[bias-report@auctoric.com]`
-* **Public Transparency Hub:** `[https://auctoric.com/trust/ethics]`
+* **Ethics Concerns:** `[ethics@auctoric.ai]`
+* **Algorithmic Bias Reports:** `[bias-report@auctoric.ai]`
+* **Public Transparency Hub:** `[https://auctoric.ai/trust/ethics]`

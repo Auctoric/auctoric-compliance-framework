@@ -13,7 +13,7 @@
 **[Auctoric, Inc.]** ("**Auctoric**", "we", "us", or "our") provides an enterprise-grade Governed AI-as-a-System platform. We are committed to upholding the highest standards of data protection, transparency, and individual privacy rights.
 
 This Global Privacy Policy ("**Policy**") explains how we collect, use, disclose, and protect personal data across our websites, cloud platform, developer consoles, APIs, and client-facing AI governance solutions. It applies to:
-* Visitors to our websites (`[https://auctoric.com]`);
+* Visitors to our websites (`[https://auctoric.ai]`);
 * Registered users, administrators, and developers utilizing our platform;
 * Individuals whose contact information is collected through sales and marketing initiatives.
 
@@ -55,7 +55,7 @@ Auctoric shares personal data only with trusted third-party service providers ("
 * **Payment Gateways:** PCI-DSS Level 1 certified processors (e.g., Stripe);
 * **Security & Monitoring Providers:** Managed threat detection, telemetry aggregation, and WAF providers.
 
-An updated list of authorized Subprocessors is published at `[https://auctoric.com/legal/subprocessors]`.
+An updated list of authorized Subprocessors is published at `[https://auctoric.ai/legal/subprocessors]`.
 
 ---
 
@@ -88,7 +88,7 @@ Depending on your jurisdiction (e.g., GDPR, CCPA/CPRA, LGPD), you possess specif
 5. **Rights Regarding Automated Decision-Making & Profiling:** Understand the logic involved in automated systems and request human intervention. See our [Automated Decision-Making Notice](../ai-governance/automated-decision-making-notice.md).
 6. **Right to Opt-Out of Sale / Sharing (California CPRA):** Auctoric does not sell or share personal information for cross-context behavioral advertising.
 
-To exercise these rights, email `[privacy@auctoric.com]` or submit a request via our Data Privacy Portal at `[https://auctoric.com/privacy/requests]`.
+To exercise these rights, email `[privacy@auctoric.ai]` or submit a request via our Data Privacy Portal at `[https://auctoric.ai/privacy/requests]`.
 
 ---
 
@@ -107,7 +107,7 @@ Auctoric implements technical and organizational safeguards certified against IS
 For inquiries, concerns, or formal privacy complaints, please contact our Data Protection Officer:
 
 * **Data Protection Officer:** `[Name of DPO / Privacy Officer]`
-* **Email:** `[dpo@auctoric.com]` or `[privacy@auctoric.com]`
+* **Email:** `[dpo@auctoric.ai]` or `[privacy@auctoric.ai]`
 * **Physical Address:** `[Auctoric, Inc., Attn: Privacy Office, 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`
-* **EU Representative (GDPR Art. 27):** `[Auctoric EU Compliance Ltd, Dublin, Ireland - eu-rep@auctoric.com]`
-* **UK Representative (UK GDPR):** `[Auctoric UK Ltd, London, United Kingdom - uk-rep@auctoric.com]`
+* **EU Representative (GDPR Art. 27):** `[Auctoric EU Compliance Ltd, Dublin, Ireland - eu-rep@auctoric.ai]`
+* **UK Representative (UK GDPR):** `[Auctoric UK Ltd, London, United Kingdom - uk-rep@auctoric.ai]`

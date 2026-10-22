@@ -19,9 +19,9 @@
   * **Integrity:** Moderate
   * **Availability:** Moderate
   * **Overall Security Impact Level:** **MODERATE**
-* **System Owner:** Chief Technology Officer (`[cto@auctoric.com]`)
-* **Information System Security Officer (ISSO):** Director of Security Operations (`[security-ops@auctoric.com]`)
-* **Authorizing Official (AO):** Chief Information Security Officer (`[ciso@auctoric.com]`)
+* **System Owner:** Chief Technology Officer (`[cto@auctoric.ai]`)
+* **Information System Security Officer (ISSO):** Director of Security Operations (`[security-ops@auctoric.ai]`)
+* **Authorizing Official (AO):** Chief Information Security Officer (`[ciso@auctoric.ai]`)
 
 ---
 

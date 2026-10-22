@@ -94,8 +94,8 @@ Under the California Consumer Privacy Act (CPRA), California residents have the 
 
 ### 6.1 If Auctoric is the Direct Controller (Account Holders & Platform Users)
 To request an explanation, dispute an automated account action (e.g., security suspension), or exercise privacy rights:
-* **Online Portal:** `[https://auctoric.com/privacy/adm-review]`
-* **Email:** `[adm-review@auctoric.com]` or `[privacy@auctoric.com]`
+* **Online Portal:** `[https://auctoric.ai/privacy/adm-review]`
+* **Email:** `[adm-review@auctoric.ai]` or `[privacy@auctoric.ai]`
 
 ### 6.2 If Auctoric is the Technology Provider (End-Users of Customer Applications)
 If your application or interaction was with an enterprise customer utilizing Auctoric's platform (e.g., a bank, healthcare network, or employer), you should submit your request directly to that organization (the Data Controller). Upon receipt of verified controller instructions, Auctoric will provide all requisite audit telemetry and algorithmic explanations to facilitate your request.
@@ -105,6 +105,6 @@ If your application or interaction was with an enterprise customer utilizing Auc
 ## 7. Contact Details
 
 For inquiries regarding this ADM Notice or our algorithmic governance practices:
-* **Chief AI Governance Officer:** `[caigo@auctoric.com]`
-* **Data Protection Officer:** `[dpo@auctoric.com]`
+* **Chief AI Governance Officer:** `[caigo@auctoric.ai]`
+* **Data Protection Officer:** `[dpo@auctoric.ai]`
 * **Mailing Address:** `[Auctoric, Inc., 100 Enterprise Way, Suite 400, San Francisco, CA 94105]`

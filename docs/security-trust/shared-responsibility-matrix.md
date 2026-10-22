@@ -110,5 +110,5 @@ The OWASP Top 10 for Large Language Applications requires specific shared action
 ## 5. Contact & Support
 
 For assistance regarding shared controls, architecture reviews, or compliance scoping:
-* **Compliance Engineering:** `[compliance-eng@auctoric.com]`
-* **Trust & Security Portal:** `[https://trust.auctoric.com]`
+* **Compliance Engineering:** `[compliance-eng@auctoric.ai]`
+* **Trust & Security Portal:** `[https://trust.auctoric.ai]`

@@ -60,7 +60,7 @@ Auctoric implements and maintains appropriate technical and organizational measu
 ## 5. Subprocessors
 
 ### 5.1 Authorization
-Customer provides general written authorization for Auctoric to engage third-party Subprocessors to perform specific processing activities. An up-to-date list of Subprocessors is available at `[https://auctoric.com/legal/subprocessors]`.
+Customer provides general written authorization for Auctoric to engage third-party Subprocessors to perform specific processing activities. An up-to-date list of Subprocessors is available at `[https://auctoric.ai/legal/subprocessors]`.
 
 ### 5.2 Notification and Objection Right
 Auctoric will notify Customer at least thirty (30) calendar days prior to adding or replacing a Subprocessor via email or dashboard notification. Customer may object to a new Subprocessor on reasonable data protection grounds within fifteen (15) days of receipt of such notice. If Customer objects and the parties cannot resolve the objection, Customer may terminate the affected Services without penalty.

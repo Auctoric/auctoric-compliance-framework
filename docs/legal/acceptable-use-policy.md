@@ -30,7 +30,7 @@ You agree not to use the Services, or allow any third party to use the Services,
 ### 2.2 Cyberattacks, Exploitation, and Malicious Software
 1. Generating, optimizing, or deploying computer viruses, rootkits, polymorphic malware, spyware, or ransomware payloads;
 2. Automating unauthorized reconnaissance, vulnerability exploitation, credential stuffing, or distributed denial-of-service (DDoS) operations;
-3. Conducting adversarial jailbreak testing, prompt extraction, or safety boundary bypasses against Auctoric infrastructure without prior written authorization from `[security@auctoric.com]`;
+3. Conducting adversarial jailbreak testing, prompt extraction, or safety boundary bypasses against Auctoric infrastructure without prior written authorization from `[security@auctoric.ai]`;
 4. Attempting to reverse-engineer model weights, gradient histories, or foundational architectures.
 
 ### 2.3 Weapons, CBRN, and Physical Harm
@@ -56,7 +56,7 @@ You agree not to use the Services, or allow any third party to use the Services,
 If you utilize Auctoric to support High-Risk AI Systems as classified under the EU AI Act (Annex III) or critical systems under NIST AI RMF:
 
 1. **Human-in-the-Loop (HITL):** You must maintain meaningful human oversight mechanisms capable of reviewing, rejecting, or overriding platform outputs.
-2. **Post-Market Monitoring:** You must log system interactions and report any algorithmic anomalies or systemic bias incidents to `[compliance@auctoric.com]`.
+2. **Post-Market Monitoring:** You must log system interactions and report any algorithmic anomalies or systemic bias incidents to `[compliance@auctoric.ai]`.
 3. **Mandatory Documentation:** You must maintain technical documentation demonstrating compliance with risk management benchmarks as outlined in our [ISO 42001 & EU AI Act Policy](../ai-governance/iso-42001-eu-ai-act-policy.md).
 
 ---
@@ -81,7 +81,7 @@ Auctoric reserves the right to investigate potential violations. Depending on th
 
 ### 5.2 Appeals Process
 If you believe your account suspension or prompt filtering resulted from an erroneous classification or false positive:
-1. Submit an appeal to `[appeals@auctoric.com]` within fourteen (14) days of notice;
+1. Submit an appeal to `[appeals@auctoric.ai]` within fourteen (14) days of notice;
 2. Include account ID, transaction hash or timestamp, and technical justification;
 3. The Auctoric AI Safety & Compliance Committee will review the appeal and deliver a written determination within five (5) business days.
 
@@ -90,5 +90,5 @@ If you believe your account suspension or prompt filtering resulted from an erro
 ## 6. Reporting Violations
 
 If you discover or suspect a violation of this Policy, please report it immediately:
-* **Email:** `[safety@auctoric.com]` or `[trust@auctoric.com]`
-* **Online Incident Form:** `[https://auctoric.com/safety/report-violation]`
+* **Email:** `[safety@auctoric.ai]` or `[trust@auctoric.ai]`
+* **Online Incident Form:** `[https://auctoric.ai/safety/report-violation]`
